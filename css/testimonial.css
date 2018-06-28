@@ -1,0 +1,117 @@
+* {
+    margin: 0;
+    padding: 0;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+img {
+    border: none;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.krakatoa {
+    display: none;
+    margin: 50px auto;
+    width: 100% !important;
+}
+
+.krakatoa-control {
+    padding-bottom: 20px;
+}
+
+@media(min-width: 600px) {
+    .dropdown:hover>.dropdown-menu {
+        display: block;
+    }
+}
+
+.arrows {
+    position: absolute;
+    top: 0px;
+    left: 0;
+    z-index: 10;
+}
+
+.arrow-left {
+    background-position: 0 0;
+    position: absolute;
+    right: 10px;
+    top: 180px;
+    color: #00193a;
+}
+
+.arrow-left i {
+    background-color: #ffffff;
+    box-shadow: 0 0 10px 0 rgba(0, 25, 58, 0.25);
+    padding: 15px 15px;
+    border-radius: 71px;
+    font-size: 30px;
+}
+
+.arrow-left:hover {
+    background-position: 0 -16px;
+}
+
+.arrow-right {
+    left: 1150px;
+    background-position: -20px 0px;
+    position: absolute;
+    top: 180px;
+    color: #00193a;
+}
+
+.arrow-right i {
+    background-color: #ffffff;
+    box-shadow: 0 0 10px 0 rgba(0, 25, 58, 0.25);
+    padding: 15px 15px;
+    border-radius: 71px;
+    font-size: 30px;
+}
+
+.arrow-right:hover {
+    background-position: -20px -16px;
+}
+
+.buttons {
+    position: absolute;
+    top: 107%;
+    left: 50%;
+    z-index: 100;
+}
+
+.pagination {
+    float: left;
+    margin: 0 2px;
+}
+
+.pagination a {
+    display: block;
+    width: 10px;
+    height: 0;
+    padding-top: 10px;
+    background-image: url('../images/pagination.png');
+    background-position: 0 0;
+    overflow: hidden;
+}
+
+.pagination a:hover,
+.active-button a {
+    background-position: 0 -30px;
+}
+
+.carousel-indicators li {
+    width: 10px;
+    border-radius: 10px;
+    height: 10px;
+}
+
+.carousel-indicators li.active {
+    width: 12px;
+    border-radius: 12px;
+    height: 12px;
+}

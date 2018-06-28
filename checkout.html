@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>elementolabs</title>
+    <link rel="stylesheet" type="text/css" href="css/checkout.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/landing.css">
+    <!-- jQuery library -->
+</head>
+
+<body>
+    <header id="navbar">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <a class="navbar-brand" href="index.html"><h1>elemento<span>labs</span></h1></a>
+                <a href="curriculum.html" class="btn-elemento-light-blue">Buy</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <div class="navbar-nav">
+                        <li class="nav-item dropdown">
+                            <a class="nav-item nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">Curriculum</a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="junior.html">Junior Robotics program (Age 4-9)</a>
+                                <a class="dropdown-item" href="senior.html">Senior Robotics program (Age 10-18)</a>
+                                <a></a>
+                            </div>
+                        </li>
+                        <a class="nav-item nav-link" href="why.html">Why Us</a>
+                        <a class="nav-item nav-link" href="team.html">Team</a>
+                        <a class="nav-item nav-link" href="#">Blog</a>
+                        <a class="nav-item nav-link" href="#">
+                            <img src="images/call.png" alt=""> +91-9773904934</a>
+                        <a class="nav-item btn btn-outline-primary" href="curriculum.html">Get Elemento</a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <!--  -->
+    <section class="checkout1" style="padding-top: 90px;">
+        <div class="row">
+            <div class="col-md-8">
+                <!--                <div class="row">
+                  <div class="col-md-6">
+                     <label for="select">Select your country</label>
+                  </div>
+                  <div class="col-md-6">
+                     <form>
+                        <span>Country</span>
+                        <select class="form-control">
+                           <option>United States</option>
+                        </select>
+                     </form>
+                  </div>
+               </div> -->
+                <div class="row">
+                    <div class="col-md-12">
+                        <form>
+                            <div class="form-group" style="padding-top: 40px;padding-bottom: 20px;">
+                                <input type="text" placeholder="Child&rsquo;s Name" name="c_name" id="c_name" class="full-length">
+                            </div>
+                        </form>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <form name="submit-to-google-sheet">
+                                <span class="shipping">Shipping Details</span>
+                                <br>
+                                <br>
+                                <div class="form-group half">
+                                    <input type="text" placeholder="First Name" name="f_name" id="f_name" class="fname" onkeypress="return alphaOnly(event)">
+                                </div>
+                                <div class="form-group half">
+                                    <input type="text" placeholder="Last name (optional)" name="l_name" id="l_name" class="lname" onkeypress="return alphaOnly(event)">
+                                </div>
+                                <div class="form-group half">
+                                    <input type="text" placeholder="Phone Number" name="number" id="number" class="number" onkeypress="return isNumberKey(event)" maxlength="10">
+                                </div>
+                                <div class="form-group half">
+                                    <input type="email" placeholder="Email Address" name="e_mail" id="e_mail" class="email">
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" placeholder="Address" name="address" id="address" class="full-length">
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" placeholder="Apartment, suite, etc. (optional)" class="full-length">
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" placeholder="City & State" name="city" id="city" class="full-length">
+                                </div>
+                            </form>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <p class="count">Country
+                                            <br><span class="us">India</span></p>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <form>
+                                            <!--  <span class="state">State</span>
+                                    <select class="form-select">
+                                       <option>Select</option>
+                                    </select> -->
+                                        </form>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <input type="number" placeholder="Zip Code" name="f_name" id="f_name" class="zcode" maxlength="6">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row" style="padding-top: 50px;">
+                            <div class="col-md-12">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <p class="cc">Have a Coupon Code?</p>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <input type="text" placeholder="Coupon Code" name="f_name" id="f_name" class="coupan">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <aside class="col-md-4">
+                <p>Call us for assistance +91 97739 04934</p>
+                <div class="card">
+                    <div class="chkimg">
+                        <img src="images/cart.png">
+                    </div>
+                    <span>
+                     <p>Product</p>
+                     <p id="programNameByType"></p><br>
+                     <p class="al_box">All 3 boxes will ship at once</p><hr>
+                  </span>
+                    <table>
+                        <tr>
+                            <th>Price</th>
+                            <th></th>
+                            <th id="productPrice"></th>
+                        </tr>
+                        <tr>
+                            <th>Shipping</th>
+                            <th></th>
+                            <th>FREE</th>
+                        </tr>
+                        <tr>
+                            <th>You Pay</th>
+                            <th></th>
+                            <th id="finalPrice"></th>
+                        </tr>
+                    </table>
+                    <div id="juniorProgramButton" class="paymentButtonMargin">
+                        <a href="https://www.instamojo.com/elemento/elemento-labs-junior-robotics-program/?embed=form" rel="im-checkout" data-behaviour="remote" data-text="Proceed To Pay" data-style="flat"></a>
+                    </div>
+                    <div id="seniorProgramButton" class="paymentButtonMargin">
+                        <a href="https://www.instamojo.com/elemento/elemento-3-month-program/?embed=form" class="btn btn-buy" rel="im-checkout" data-behaviour="remote" data-text="Proceed to Pay" type="sumbit" data-style="flat"></a>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </section>
+    <footer>
+        <div class="copy">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <p class="copyright">Copyright &copy; 2018 Elemento</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript">
+    document.getElementById('juniorProgramButton').style.display = 'none';
+    document.getElementById('seniorProgramButton').style.display = 'none';
+    const url = new URL(window.location.href);
+    const productType = url.searchParams.get("productId");
+    //jp 1 for junior program & sp1 for sr. program
+
+    renderCorrectBuyButton = function() {
+        if (productType === 'jp1') {
+            document.getElementById('juniorProgramButton').style.display = 'block';
+            document.getElementById('seniorProgramButton').style.display = 'none';
+            document.getElementById('productPrice').innerHTML = '4,990 INR';
+            document.getElementById('finalPrice').innerHTML = '4,990 INR';
+            document.getElementById('programNameByType').innerHTML = 'Junior Robotics Program - 3 Boxes';
+
+        } else {
+            document.getElementById('juniorProgramButton').style.display = 'none';
+            document.getElementById('seniorProgramButton').style.display = 'block';
+            document.getElementById('productPrice').innerHTML = '8,990 INR';
+            document.getElementById('finalPrice').innerHTML = '8,990 INR';
+            document.getElementById('programNameByType').innerHTML = '4,990 INR';
+            document.getElementById('programNameByType').innerHTML = 'Senior Robotics Program - 3 Boxes';
+
+
+        }
+    }
+    renderCorrectBuyButton()
+    </script>
+    <script>
+    window.onscroll = function() { myFunction() };
+    var navbar = document.getElementById("navbar");
+    var sticky = navbar.offsetTop;
+
+    function myFunction() {
+        if (window.pageYOffset >= sticky) {
+            navbar.classList.add("sticky")
+        } else {
+            navbar.classList.remove("sticky");
+        }
+    }
+
+    function isNumberKey(evt) {
+        var charCode = (evt.which) ? evt.which : event.keyCode
+        if (charCode > 31 && (charCode < 48 || charCode > 57))
+            return false;
+        return true;
+    }
+
+    function alphaOnly(event) {
+        var key = event.keyCode;
+        return ((key >= 65 && key <= 90) || key >= 97 && key <= 122);
+    };
+    </script>
+    <script src="https://js.instamojo.com/v1/checkout.js"></script>
+    <!--    <script src="https://d2xwmjc4uy2hr5.cloudfront.net/im-embed/im-embed.min.js"></script>
+ -->
+    <script src="https://js.instamojo.com/v1/button.js"></script>
+</body>
+
+</html>
