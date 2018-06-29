@@ -411,6 +411,8 @@
 
 
 
+
+
 /*------------------------------max-width 375px---------------------------------*/
 
 
@@ -816,6 +818,8 @@
         flex: 100%;
     }
 }
+
+
 
 
 
@@ -1276,6 +1280,8 @@
 
 
 
+
+
 /*-------------------team page------------------------------*/
 
 
@@ -1508,6 +1514,8 @@
         padding-top: 0px !important;
     }
 }
+
+
 
 
 
@@ -1913,6 +1921,8 @@
 
 
 
+
+
 /*--------------------------Contact Page------------------------------------*/
 
 
@@ -1949,10 +1959,6 @@
 
 
 
-
-
-
-
 /*--------------------------Curriculum Page------------------------------------*/
 
 
@@ -1972,10 +1978,43 @@
 
 @media (max-width: 414px) {
     section.pick-program .container .carousel {
-        display: block;
-    }
-    section.pick-program .container>.row>.col-6 {
         display: none;
+    }
+    section.pick-program .container>.row>.col-6:nth-child(2) {
+        margin-left: 22px;
+        background: linear-gradient(269deg, #ff7338 4%, #bf60a7 106%) left bottom #fff no-repeat;
+        background-size: 100% 10px;
+        max-width: 100%;
+        flex: 100%;
+        margin-right: 22px;
+    }
+    section.pick-program .row .col-6 .row .col-6:last-child h1 {
+        font-size: 40px;
+        font-weight: bold;
+        text-align: right;
+        color: #00193a;
+        margin-bottom: 0px;
+    }
+    section.pick-program .row .col-6 .row:first-child .col-6:last-child p {
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 1.38;
+        letter-spacing: 0.1px;
+        text-align: right;
+        color: #00193a;
+        margin-bottom: 0px;
+    }
+    section.pick-program .container>.row>.col-6:first-child {
+        margin-right: 22px;
+        margin-left: 22px;
+        background: linear-gradient(89deg, #00d39d 4%, #0f69e3 106%) left bottom #fff no-repeat;
+        background-size: 100% 10px;
+        max-width: 100%;
+        flex: 100%;
+        margin-bottom: 20px;
+    }
+    section.pick-program .row .col-6 .row .col-6:last-child h1 {
+        font-size: 40px;
     }
     section.pick-program .programs {
         padding-bottom: 20px;
@@ -2030,19 +2069,19 @@
     section.pick-program .container .row .carousel .carousel-indicators .active {
         width: 9px;
         height: 9px;
-        border-radius: 12 px;
+        border-radius: 12px;
     }
     section.pick-program .row .col-6 .row:last-child .col-6:first-child {
         flex: 0 0 100%;
         max-width: 100%;
         text-align: center;
-        margin-bottom: 40px;
+        margin-top: 40px;
     }
     section.pick-program .row .col-6 .row:last-child .col-6:last-child {
         flex: 0 0 100%;
         max-width: 100%;
         text-align: center;
-        margin-bottom: 40px;
+        margin-top: 40px;
     }
     section.pick-program .row .col-6 .row:last-child .col-6:first-child button {
         display: none;
@@ -2075,8 +2114,17 @@
 
 @media (max-width: 375px) {
     section.pick-program .row .col-6 .row .col-6:last-child h1 {
-        font-size: 44px;
+        font-size: 35px;
         font-weight: bold;
+        text-align: right;
+        color: #00193a;
+        margin-bottom: 0px;
+    }
+    section.pick-program .row .col-6 .row:first-child .col-6:last-child p {
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 1.38;
+        letter-spacing: 0.1px;
         text-align: right;
         color: #00193a;
         margin-bottom: 0px;
@@ -2086,7 +2134,7 @@
         width: 80%;
     }
     .callback .btn-elemento-transparent {
-        padding: 15px 30px;
+        padding: 15px 35px;
         width: 80%;
     }
     section.curriculum .col-4:nth-child(3) span:before {
@@ -2096,13 +2144,6 @@
         left: 215px;
     }
 }
-
-
-
-
-
-
-
 
 
 /*-----------------------checkout-------------*/

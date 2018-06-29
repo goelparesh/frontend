@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/landing.css">
+    <link rel="stylesheet" href="css/modal-video.min.css">
     <link rel="stylesheet" href="css/testimonial.css" />
     <link rel="stylesheet" href="css/responsive.css" />
 </head>
@@ -47,9 +48,9 @@
     <section class="landing-banner banner">
         <div class="banner-text">
             <h1>Robotics and Software Learning Program for Children</h1>
-            <img src="images/ic-play-header.png" srcset="images/ic-play-header@2x.png 2x, images/ic-play-header@3x.png 3x" alt="play-button">
+            <img src="images/ic-play-header.png" srcset="images/ic-play-header@2x.png 2x, images/ic-play-header@3x.png 3x" class="js-video-button" data-channel="video" data-video-url="video/vr-time.mp4" alt="play-button">
         </div>
-        <a href="" class="btn-elemento-white">WATCH VIDEO</a>
+        <a href="" class="btn-elemento-white" class="js-video-button" data-channel="video" data-video-url="http://developer.a-blogcms.jp/themes/developer/movies/2.8.0.mp4">WATCH VIDEO</a>
         <a href="" class="btn-elemento-transparent"><img src="images/ic-callback-white.png"> <span>+91 97739 04934</span></a>
     </section>
     <section class="about-elemento">
@@ -816,6 +817,15 @@
                 $('[data-toggle="dropdown"]', _d).attr('aria-expanded', _d.is(':hover'));
             }, 300);
         });
+    });
+    </script>
+    <script src="js/jquery-modal-video.min.js"></script>
+    <script>
+    $(".js-video-button").modalVideo({
+        youtube: {
+            controls: 0,
+            nocookie: true
+        }
     });
     </script>
 </body>

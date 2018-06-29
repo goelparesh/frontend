@@ -13,12 +13,6 @@ img {
     height: auto;
 }
 
-@media(min-width: 600px) {
-    .dropdown:hover>.dropdown-menu {
-        display: block;
-    }
-}
-
 a:hover {
     text-decoration: none;
 }
@@ -74,7 +68,7 @@ header nav.navbar {
 }
 
 header nav .collapse {
-    /*margin-left: 98px;*/
+    margin-left: 98px;
 }
 
 header nav .collapse img {
@@ -114,7 +108,6 @@ header nav .collapse button:focus {
 .sticky+.banner {
     padding-top: 140px;
 }
-
 
 
 /*---------------------Select Program------------------------------------*/
@@ -295,7 +288,6 @@ section.pick-program .row .col-6 .row:last-child .col-6:last-child {
     margin: auto 0px;
     text-align: center;
 }
-
 
 
 /*--------------callback form---------------*/
