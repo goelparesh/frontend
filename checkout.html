@@ -43,7 +43,7 @@
         </div>
     </header>
     <!--  -->
-    <section class="checkout1" style="padding-top: 90px;">
+    <section class="checkout1" id="checkoutContainer">
         <div class="row">
             <div class="col-md-8">
                 <!--                <div class="row">
@@ -92,31 +92,23 @@
                                     <input type="text" placeholder="Apartment, suite, etc. (optional)" class="full-length">
                                 </div>
                                 <div class="form-group">
-                                    <input type="text" placeholder="City & State" name="city" id="city" class="full-length">
+                                    <input type="text" placeholder="City" name="city" id="city" class="full-length">
                                 </div>
-                            </form>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-12">
-                                <div class="row">
+                                <div class="form-group">
+                                    <input type="text" placeholder="State" name="state" id="state" class="full-length">
+                                </div>
+                                <div class="form-group half">
                                     <div class="col-md-4">
                                         <p class="count">Country
                                             <br><span class="us">India</span></p>
                                     </div>
-                                    <div class="col-md-4">
-                                        <form>
-                                            <!--  <span class="state">State</span>
-                                    <select class="form-select">
-                                       <option>Select</option>
-                                    </select> -->
-                                        </form>
-                                    </div>
-                                    <div class="col-md-4">
-                                        <input type="number" placeholder="Zip Code" name="f_name" id="f_name" class="zcode" maxlength="6">
-                                    </div>
                                 </div>
-                            </div>
+                                <div class="form-group half">
+                                    <input type="number" placeholder="Zip Code" name="zipCode" id="zipCode" class="zcode" maxlength="6">
+                                </div>
+                            </form>
                         </div>
+                        
                         <div class="row" style="padding-top: 50px;">
                             <div class="col-md-12">
                                 <div class="row">
@@ -124,7 +116,7 @@
                                         <p class="cc">Have a Coupon Code?</p>
                                     </div>
                                     <div class="col-md-6">
-                                        <input type="text" placeholder="Coupon Code" name="f_name" id="f_name" class="coupan">
+                                        <input type="text" placeholder="Coupon Code" name="coupon" id="coupon" class="coupan">
                                     </div>
                                 </div>
                             </div>
@@ -160,10 +152,10 @@
                             <th id="finalPrice"></th>
                         </tr>
                     </table>
-                    <div id="juniorProgramButton" class="paymentButtonMargin">
+                    <div id="juniorProgramButton" class="paymentButtonMargin" onclick="postFormDataToGoogle()">
                         <a href="https://www.instamojo.com/elemento/elemento-labs-junior-robotics-program/?embed=form" rel="im-checkout" data-behaviour="remote" data-text="Proceed To Pay" data-style="flat"></a>
                     </div>
-                    <div id="seniorProgramButton" class="paymentButtonMargin">
+                    <div id="seniorProgramButton" class="paymentButtonMargin" onclick="postFormDataToGoogle()">
                         <a href="https://www.instamojo.com/elemento/elemento-3-month-program/?embed=form" class="btn btn-buy" rel="im-checkout" data-behaviour="remote" data-text="Proceed to Pay" type="sumbit" data-style="flat"></a>
                     </div>
                 </div>
@@ -214,15 +206,27 @@
     renderCorrectBuyButton()
     </script>
     <script>
+        function postFormDataToGoogle () {
+            console.log('click captured');
+            const scriptURL = 'https://script.google.com/macros/s/AKfycbxEud14DdE_bA56J7ta7aBej65h2tn6Bfp7pM1fLSpN5kZhHZw/exec';
+            const form = document.forms['submit-to-google-sheet'];
+            fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+                .then(response => console.log('Success!', response))
+                .catch(error => console.error('Error!', error.message))
+        }
+    </script>
+    <script>
     window.onscroll = function() { myFunction() };
     var navbar = document.getElementById("navbar");
     var sticky = navbar.offsetTop;
-
+    var checkoutContainer = document.getElementById("checkoutContainer");
     function myFunction() {
         if (window.pageYOffset >= sticky) {
             navbar.classList.add("sticky")
+            checkoutContainer.classList.add("checkoutContainerPadding")
         } else {
             navbar.classList.remove("sticky");
+            checkoutContainer.classList.remove("checkoutContainerPadding");
         }
     }
 
