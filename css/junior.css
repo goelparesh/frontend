@@ -127,7 +127,7 @@ section.banner {
     background-position: center center;
     background-size: cover;
     text-align: center;
-    padding: 50px 0px;
+    padding: 100px 0px;
     color: #fff;
     width: 100%;
     border-radius: 85%/0px 0px 140px 120px;
@@ -652,7 +652,9 @@ p.box-1 {
 ol {
     padding: 0px 36px
 }
-
+ul {
+    padding: 0px 36px
+}
 p.box-1 {
     padding: 10px 20px;
 }
@@ -751,6 +753,7 @@ p.subscribe {
     padding: 5px;
     color: #fff;
 }
+
 
 
 
@@ -861,7 +864,7 @@ p.subscribe {
         padding: 10px 0px;
         box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.33);
         position: fixed !important;
-        top: 664px !important;
+        bottom: 0;
         width: 100%;
     }
     section.project .buy-now p {

@@ -16,8 +16,8 @@
     <header id="navbar">
         <div class="container">
             <nav class="navbar navbar-expand-lg navbar-light">
-                <a class="navbar-brand" href="index.html"><h1>elemento<span>labs</span></h1></a>
-                <a href="curriculum.html" class="btn-elemento-light-blue">Buy</a>
+                <a class="navbar-brand" href="https://elementolabs.com/"><h1>elemento<span>labs</span></h1></a>
+                <a href="robotics-program-for-kids.html" class="btn-elemento-light-blue">Buy</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -34,9 +34,9 @@
                         <a class="nav-item nav-link" href="why.html">Why Us</a>
                         <a class="nav-item nav-link" href="team.html">Team</a>
                         <a class="nav-item nav-link" href="#">Blog</a>
-                        <a class="nav-item nav-link" href="#">
-                            <img src="images/call.png" alt=""> +91-9773904934</a>
-                        <a class="nav-item btn btn-outline-primary" href="curriculum.html">Get Elemento</a>
+                        <a class="nav-item nav-link" href="tel:977-390-4934">
+                            <img src="images/call.png" alt=""> +91-97739 04934</a>
+                        <a class="nav-item btn btn-outline-primary" href="robotics-program-for-kids.html">Get Elemento</a>
                     </div>
                 </div>
             </nav>
@@ -133,7 +133,7 @@
                 </div>
             </div>
             <aside class="col-md-4">
-                <p>Call us for assistance +91 97739 04934</p>
+                <p>Call us for assistance <a  href="tel:977-390-4934">+91 97739 04934</a></p>
                 <div class="card">
                     <div class="chkimg">
                         <img src="images/cart.png">
@@ -193,7 +193,7 @@
     //jp 1 for junior program & sp1 for sr. program
 
     renderCorrectBuyButton = function() {
-        if (productType === 'jp1') {
+        if (productType === 'junior-robotics') {
             document.getElementById('juniorProgramButton').style.display = 'block';
             document.getElementById('seniorProgramButton').style.display = 'none';
             document.getElementById('productPrice').innerHTML = '4,990 INR';

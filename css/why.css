@@ -220,7 +220,7 @@ header nav .collapse button:focus {
 /*------------------banner-----------------*/
 
 .banner {
-    background-image: linear-gradient(0deg, #a6428dbf, #a6428dbf), url(../images/bg-contactus-header.jpg);
+    background-image: linear-gradient(0deg, #00193a, #a6428dbf), url(../images/bg-contactus-header.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: bottom right;
