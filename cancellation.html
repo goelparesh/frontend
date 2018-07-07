@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>elementolabs</title>
+    <link rel="stylesheet" type="text/css" href="css/checkout.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700" rel="stylesheet">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/all.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/landing.css">
+    <!-- jQuery library -->
+</head>
+
+<body>
+    <header id="navbar">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <a class="navbar-brand" href="index.html"><h1>elemento<span>labs</span></h1></a>
+                <a href="curriculum.html" class="btn-elemento-light-blue">Buy</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <div class="navbar-nav">
+                        <li class="nav-item dropdown">
+                            <a class="nav-item nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">Curriculum</a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="junior.html">Junior Robotics program (Age 4-9)</a>
+                                <a class="dropdown-item" href="senior.html">Senior Robotics program (Age 10-18)</a>
+                                <a></a>
+                            </div>
+                        </li>
+                        <a class="nav-item nav-link" href="why.html">Why Us</a>
+                        <a class="nav-item nav-link" href="team.html">Team</a>
+                        <a class="nav-item nav-link" href="#">Blog</a>
+                        <a class="nav-item nav-link" href="#">
+                            <img src="images/call.png" alt=""> +91-9773904934</a>
+                        <a class="nav-item btn btn-outline-primary" href="curriculum.html">Get Elemento</a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <!--  -->
+   <div>
+   <meta charset="utf-8" />
+<div class="col-xs-12 mtop10 text" style="text-align: left;">We have a liberal return and refund policy as detailed below:</div>
+<br />
+<div class="col-xs-12 mtop10 text" style="text-align: left;"></div>
+<div class="col-xs-12 mtop10 text" style="text-align: left;"></div>
+<div class="col-xs-12 mtop10 text" style="text-align: left;"><strong></strong></div>
+<div class="col-xs-12 mtop10 text" style="text-align: left;"><strong>Order Cancellation</strong></div>
+<div class="col-xs-12 mtop10 text">To cancel the order, simply call our support at +91 97739 04934 .<br />Just in case the box has already been shipped, please do not accept the courier and we will take care of the logistics and return your money to your bank account / credit card.</div>
+<br />
+<div class="col-xs-12 mtop10 text"><strong>Can I cancel a Subscription ?</strong></div>
+<div class="row">
+<div class="col-xs-12 body3 mtop10"><strong></strong></div>
+<div class="col-xs-12 mtop10 text">Oh yes sure! You can cancel a subscription any time. Your balance amount from the subscription will be refunded to your account within 10 business days after deducting for the delivered boxes.<span> </span></div>
+<div class="col-xs-12 mtop10 text"><br />
+<p><strong>How long will the refund take ?<br /></strong>In case we've not shipped the order, we will process the refund on the same business day and refund should get credited in your account within 7 business days. On the cancellation of subscription, the refund amount will be credited to your account within 10 business days.</p>
+</div>
+</div>
+<div class="row">
+<div class="col-xs-12 mtop10 text"></div>
+<div class="col-xs-12 mtop10 text"></div>
+</div>
+<div class="row">
+<div class="col-xs-12 body3 mtop10"><strong></strong></div>
+</div>
+<div class="row"></div>
+   </div>
+
+
+
+    <footer>
+        <div class="copy">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <p class="copyright">Copyright &copy; 2018 Elemento</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="js/jquery-3.3.1.slim.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script type="text/javascript">
+    document.getElementById('juniorProgramButton').style.display = 'none';
+    document.getElementById('seniorProgramButton').style.display = 'none';
+    const url = new URL(window.location.href);
+    const productType = url.searchParams.get("productId");
+    //jp 1 for junior program & sp1 for sr. program
+
+    renderCorrectBuyButton = function() {
+        if (productType === 'jp1') {
+            document.getElementById('juniorProgramButton').style.display = 'block';
+            document.getElementById('seniorProgramButton').style.display = 'none';
+            document.getElementById('productPrice').innerHTML = '4,990 INR';
+            document.getElementById('finalPrice').innerHTML = '4,990 INR';
+            document.getElementById('programNameByType').innerHTML = 'Junior Robotics Program - 3 Boxes';
+
+        } else {
+            document.getElementById('juniorProgramButton').style.display = 'none';
+            document.getElementById('seniorProgramButton').style.display = 'block';
+            document.getElementById('productPrice').innerHTML = '8,990 INR';
+            document.getElementById('finalPrice').innerHTML = '8,990 INR';
+            document.getElementById('programNameByType').innerHTML = '4,990 INR';
+            document.getElementById('programNameByType').innerHTML = 'Senior Robotics Program - 3 Boxes';
+
+
+        }
+    }
+    renderCorrectBuyButton()
+    </script>
+    <script>
+    window.onscroll = function() { myFunction() };
+    var navbar = document.getElementById("navbar");
+    var sticky = navbar.offsetTop;
+
+    function myFunction() {
+        if (window.pageYOffset >= sticky) {
+            navbar.classList.add("sticky")
+        } else {
+            navbar.classList.remove("sticky");
+        }
+    }
+
+    function isNumberKey(evt) {
+        var charCode = (evt.which) ? evt.which : event.keyCode
+        if (charCode > 31 && (charCode < 48 || charCode > 57))
+            return false;
+        return true;
+    }
+
+    function alphaOnly(event) {
+        var key = event.keyCode;
+        return ((key >= 65 && key <= 90) || key >= 97 && key <= 122);
+    };
+    </script>
+    <script src="https://js.instamojo.com/v1/checkout.js"></script>
+    <!--    <script src="https://d2xwmjc4uy2hr5.cloudfront.net/im-embed/im-embed.min.js"></script>
+ -->
+    <script src="https://js.instamojo.com/v1/button.js"></script>
+</body>
+
+</html>
