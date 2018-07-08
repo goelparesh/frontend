@@ -2145,13 +2145,6 @@
     }
 }
 
-
-/*-----------------------checkout-------------*/
-
-
-/*-----------------------checkout-------------*/
-
-
 /*-----------------------checkout-------------*/
 
 
@@ -2173,7 +2166,7 @@
     }
     .checkout1 .row .col-md-8 #next-form {
         position: absolute;
-        top: 565px;
+        top: 460px;
     }
     hr {
         display: none;
@@ -2256,10 +2249,10 @@
     .proceed {
         width: 100%;
         margin: 0px auto;
-        position: absolute;
+        position: fixed;
         background-color: #fff;
-        padding: 10px 10px;
-        bottom: -115%;
+        padding: 16px 10px 0 10px;
+        bottom: 0;
         display: none;
         text-align: center;
         border-top: 1px solid #f0f0f0;

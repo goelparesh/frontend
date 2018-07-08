@@ -4,119 +4,132 @@
 <head>
     <title>elementolabs</title>
     <link rel="stylesheet" type="text/css" href="css/checkout.css">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700" rel="stylesheet">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/all.css">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/responsive.css">
     <link rel="stylesheet" type="text/css" href="css/landing.css">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!-- jQuery library -->
 </head>
 
 <body>
-    <header id="navbar">
-        <div class="container">
-            <nav class="navbar navbar-expand-lg navbar-light">
-                <a class="navbar-brand" href="https://elementolabs.com/"><h1>elemento<span>labs</span></h1></a>
-                <a href="robotics-program-for-kids.html" class="btn-elemento-light-blue">Buy</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                    <div class="navbar-nav">
-                        <li class="nav-item dropdown">
-                            <a class="nav-item nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">Curriculum</a>
-                            <div class="dropdown-menu">
-                                <a class="dropdown-item" href="junior.html">Junior Robotics program (Age 4-9)</a>
-                                <a class="dropdown-item" href="senior.html">Senior Robotics program (Age 10-18)</a>
-                                <a></a>
-                            </div>
-                        </li>
-                        <a class="nav-item nav-link" href="why.html">Why Us</a>
-                        <a class="nav-item nav-link" href="team.html">Team</a>
-                        <a class="nav-item nav-link" href="#">Blog</a>
-                        <a class="nav-item nav-link" href="tel:977-390-4934">
-                            <img src="images/call.png" alt=""> +91-97739 04934</a>
-                        <a class="nav-item btn btn-outline-primary" href="robotics-program-for-kids.html">Get Elemento</a>
-                    </div>
+<header id="navbar">
+    <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <a class="navbar-brand" href="https://elementolabs.com/"><h1>elemento<span>labs</span></h1></a>
+            <a href="robotics-program-for-kids.html" class="btn-elemento-light-blue">Buy</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <li class="nav-item dropdown">
+                        <a class="nav-item nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">Curriculum</a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="junior.html">Junior Robotics program (Age 4-9)</a>
+                            <a class="dropdown-item" href="senior.html">Senior Robotics program (Age 10-18)</a>
+                            <a></a>
+                        </div>
+                    </li>
+                    <a class="nav-item nav-link" href="why.html">Why Us</a>
+                    <a class="nav-item nav-link" href="team.html">Team</a>
+                    <a class="nav-item nav-link" href="#">Blog</a>
+                    <a class="nav-item nav-link" href="tel:977-390-4934">
+                        <img src="images/call.png" alt=""> +91-97739 04934</a>
+                    <a class="nav-item btn btn-outline-primary" href="robotics-program-for-kids.html">Get Elemento</a>
                 </div>
-            </nav>
-        </div>
-    </header>
-    <!--  -->
-    <section class="checkout1" id="checkoutContainer">
-        <div class="row">
-            <div class="col-md-8">
-                <!--                <div class="row">
-                  <div class="col-md-6">
-                     <label for="select">Select your country</label>
-                  </div>
-                  <div class="col-md-6">
-                     <form>
-                        <span>Country</span>
-                        <select class="form-control">
-                           <option>United States</option>
-                        </select>
-                     </form>
-                  </div>
-               </div> -->
+            </div>
+        </nav>
+    </div>
+</header>
+<section class="checkout1" id="checkoutContainer">
+    <div class="row">
+        <div class="col-md-8">
+            <div class="row">
+                <div class="col-md-6">
+                    <h4>Call us for assistance</h4>
+                    <button class="btn-elemento-transparent"><img src="images/call.png" alt="call"> <span>+91 97739 04934</span></button>
+                </div>
+                <div class="col-md-12" style="text-align: -webkit-center;padding-bottom: 20px;">
+                    <span><label for="select">Select your country</label></span>
+                    <span>
+                        	<form style="display: inline-block;">
+                            <select class="select-country form-control">
+                                <!-- onchange="showDiv(this)"> -->
+                                <option value="0">Select Country</option>
+                                <option value="1">India</option>
+                                <!--   <option value="1">South Africa</option>
+                                <option value="1">Germany</option> -->
+                            </select>
+                        </form></span>
+                </div>
+            </div>
+            <div class="row" id="next-form">
+                <div class="col-md-12">
+                    <form>
+                        <div class="form-group">
+                            <input type="text" placeholder="Child’s Name" name="c_name" id="c_name" class="full-length">
+                        </div>
+                    </form>
+                </div>
                 <div class="row">
                     <div class="col-md-12">
-                        <form>
-                            <div class="form-group" style="padding-top: 40px;padding-bottom: 20px;">
-                                <input type="text" placeholder="Child&rsquo;s Name" name="c_name" id="c_name" class="full-length">
+                        <form name="submit-to-google-sheet">
+                            <span class="shipping">Shipping Details</span>
+                            <br>
+                            <br>
+                            <div class="form-group half">
+                                <input type="text" placeholder="First Name" name="f_name" id="f_name" class="fname" onkeypress="return alphaOnly(event)">
+                            </div>
+                            <div class="form-group half">
+                                <input type="text" placeholder="Last name (optional)" name="l_name" id="l_name" class="lname" onkeypress="return alphaOnly(event)">
+                            </div>
+                            <div class="form-group half">
+                                <input type="text" placeholder="Phone Number" name="number" id="number" class="number" onkeypress="return isNumberKey(event)" maxlength="10">
+                            </div>
+                            <div class="form-group half">
+                                <input type="email" placeholder="Email Address" name="e_mail" id="e_mail" class="email">
+                            </div>
+                            <div class="form-group">
+                                <input type="text" placeholder="Address" name="address" id="address" class="full-length">
+                            </div>
+                            <div class="form-group">
+                                <input type="text" placeholder="Apartment, suite, etc. (optional)" class="full-length">
+                            </div>
+                            <div class="form-group">
+                                <input type="text" placeholder="City" name="city" id="city" class="full-length">
+                            </div>
+                            <div class="form-group">
+                                <input type="text" placeholder="State" name="state" id="state" class="full-length">
+                            </div>
+                            <div class="form-group half">
+                                <div class="col-md-4">
+                                    <p class="count">Country
+                                        <br><span class="us">India</span></p>
+                                </div>
+                            </div>
+                            <div class="form-group half">
+                                <input type="number" placeholder="Pin Code" name="zipCode" id="zipCode" class="zcode" maxlength="6">
                             </div>
                         </form>
                     </div>
                     <div class="row">
                         <div class="col-md-12">
-                            <form name="submit-to-google-sheet">
-                                <span class="shipping">Shipping Details</span>
-                                <br>
-                                <br>
-                                <div class="form-group half">
-                                    <input type="text" placeholder="First Name" name="f_name" id="f_name" class="fname" onkeypress="return alphaOnly(event)">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <p class="cc">Have a Coupon Code?</p>
                                 </div>
-                                <div class="form-group half">
-                                    <input type="text" placeholder="Last name (optional)" name="l_name" id="l_name" class="lname" onkeypress="return alphaOnly(event)">
-                                </div>
-                                <div class="form-group half">
-                                    <input type="text" placeholder="Phone Number" name="number" id="number" class="number" onkeypress="return isNumberKey(event)" maxlength="10">
-                                </div>
-                                <div class="form-group half">
-                                    <input type="email" placeholder="Email Address" name="e_mail" id="e_mail" class="email">
-                                </div>
-                                <div class="form-group">
-                                    <input type="text" placeholder="Address" name="address" id="address" class="full-length">
-                                </div>
-                                <div class="form-group">
-                                    <input type="text" placeholder="Apartment, suite, etc. (optional)" class="full-length">
-                                </div>
-                                <div class="form-group">
-                                    <input type="text" placeholder="City" name="city" id="city" class="full-length">
-                                </div>
-                                <div class="form-group">
-                                    <input type="text" placeholder="State" name="state" id="state" class="full-length">
-                                </div>
-                                <div class="form-group half">
-                                    <div class="col-md-4">
-                                        <p class="count">Country
-                                            <br><span class="us">India</span></p>
-                                    </div>
-                                </div>
-                                <div class="form-group half">
-                                    <input type="number" placeholder="Zip Code" name="zipCode" id="zipCode" class="zcode" maxlength="6">
-                                </div>
-                            </form>
-                        </div>
-
-                        <div class="row" style="padding-top: 50px;">
-                            <div class="col-md-12">
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <p class="cc">Have a Coupon Code?</p>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <input type="text" placeholder="Coupon Code" name="coupon" id="coupon" class="coupan">
+                                <div class="col-md-6">
+                                    <div class="coupon">
+                                        <span>Coupon Applied!</span>
+                                        <p>Coupon Code</p>
+                                        <input type="text" placeholder="Coupon Code" name="f_name" id="f_name" class="coupan">
+                                        <div class="add-coupon"><i class="material-icons">check</i></div>
+                                        <div class="subs-coupon"><i class="material-icons">clear</i></div>
                                     </div>
                                 </div>
                             </div>
@@ -124,17 +137,20 @@
                     </div>
                 </div>
             </div>
-            <aside class="col-md-4">
-                <p>Call us for assistance <a  href="tel:977-390-4934">+91 97739 04934</a></p>
-                <div class="card">
-                    <div class="chkimg">
-                        <img src="images/cart.png">
-                    </div>
-                    <span>
+        </div>
+        <aside class="col-md-4">
+            <p>Call us for assistance +91 97739 04934</p>
+            <div class="card">
+                <div class="chkimg">
+                    <img src="images/cart.png">
+                </div>
+                <span>
                      <p>Product</p>
                      <p id="programNameByType"></p><br>
-                     <p class="al_box">All 3 boxes will ship at once</p><hr>
                   </span>
+                <div class="cart" id="cart">
+                    <p class="al_box"><i class="material-icons">error_outline</i><span> All 3 boxes will ship at once</span></p>
+                    <hr>
                     <table>
                         <tr>
                             <th>Price</th>
@@ -159,27 +175,96 @@
                         <a href="https://www.instamojo.com/elemento/elemento-3-month-program/?embed=form" class="btn btn-buy" rel="im-checkout" data-behaviour="remote" data-text="Proceed to Pay" type="sumbit" data-style="flat"></a>
                     </div>
                 </div>
-            </aside>
+            </div>
+        </aside>
+        <div class="shiping" id="shiping">
+            <button id="ship-details" class="btn-elemento-light-blue">ENTER SHIPPING DETAILS</button>
         </div>
-    </section>
-    <footer>
-        <div class="copy">
-            <div class="container">
+    </div>
+</section>
+<div class="proceed" style="text-align: -webkit-center;">
+    <div id="juniorProgramButtonM" class="paymentButtonMargin" onclick="postFormDataToGoogle()">
+        <a href="https://www.instamojo.com/elemento/elemento-labs-junior-robotics-program/?embed=form" rel="im-checkout" data-behaviour="remote" data-text="Proceed To Pay" data-style="flat"></a>
+    </div>
+    <div id="seniorProgramButtonM" class="paymentButtonMargin" onclick="postFormDataToGoogle()">
+        <a href="https://www.instamojo.com/elemento/elemento-3-month-program/?embed=form" class="btn btn-buy" rel="im-checkout" data-behaviour="remote" data-text="Proceed to Pay" type="sumbit" data-style="flat"></a>
+    </div>
+</div>
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-8">
+                <h1>elemento<span>labs</span></h1>
                 <div class="row">
-                    <div class="col-12">
-                        <p class="copyright">Copyright &copy; 2018 Elemento</p>
+                    <div class="col-6">
+                        <ul>
+                            <li><a href="">talk to us: +91 9773904934</li>
+                            <li><a href="contact.html">Contact Us</a></li>
+                            <li><a href="why.html">About Us</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-6">
+                        <ul>
+                            <li>Terms & Conditions</li>
+                            <li>Cancellation Policy</li>
+                            <li>Privacy Policy</li>
+                        </ul>
                     </div>
                 </div>
             </div>
+            <div class="col-4">
+                <form id="formID">
+                    <p>Stay Updated on the world of Robotics.<span>Subscribe to our Newsletter</span><strong>Thanks for Subscribing!</strong></p>
+                    <div>
+                        <div class="add-email"><i class="material-icons">add</i></div>
+                        <div class="subs-email"><i class="material-icons">done</i></div>
+                        <input type="email" name="sbscribe" class="sbscribe form-control" placeholder="Email Address">
+                    </div>
+                </form>
+                <div class="social">
+                    <span><i class="fab fa-facebook-f"></i></span>
+                    <span><i class="fab fa-twitter"></i></span>
+                    <span><i class="fab fa-google-plus-g"></i></span>
+                    <span><i class="fab fa-pinterest-p"></i></span>
+                </div>
+            </div>
         </div>
-    </footer>
-    <script src="js/jquery-3.3.1.slim.min.js"></script>
-    <script src="js/popper.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/jquery.min.js"></script>
-    <script type="text/javascript">
+    </div>
+    <!--  <div class="copy">
+        <div class="container">
+           <div class="row">
+              <div class="col-12">
+                 <p class="copyright">Copyright &copy; 2018 Elemento</p>
+              </div>
+           </div>
+        </div>
+     </div> -->
+</footer>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+<script type="text/javascript">
+    $('.add-coupon').on('click', function() {
+        if ($(this).val() == '') {
+            $('.coupon span').addClass('has-success').removeClass('has-warning');
+            $('.coupon p').addClass('has-success').removeClass('has-warning');
+            $('table .discount').addClass('has-success').removeClass('has-warning');
+            $('.coupon .subs-coupon').addClass('has-success').removeClass('has-warning');
+        }
+    });
+</script>
+<script src="js/jquery-3.3.1.slim.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.min.js"></script>
+<script type="text/javascript">
     document.getElementById('juniorProgramButton').style.display = 'none';
+    document.getElementById('juniorProgramButtonM').style.display = 'none';
+
     document.getElementById('seniorProgramButton').style.display = 'none';
+    document.getElementById('seniorProgramButtonM').style.display = 'none';
+
     const url = new URL(window.location.href);
     const productType = url.searchParams.get("productId");
     //jp 1 for junior program & sp1 for sr. program
@@ -187,14 +272,22 @@
     renderCorrectBuyButton = function() {
         if (productType === 'junior-robotics') {
             document.getElementById('juniorProgramButton').style.display = 'block';
+            document.getElementById('juniorProgramButtonM').style.display = 'block';
+
             document.getElementById('seniorProgramButton').style.display = 'none';
+            document.getElementById('seniorProgramButtonM').style.display = 'none';
+
             document.getElementById('productPrice').innerHTML = '4,990 INR';
             document.getElementById('finalPrice').innerHTML = '4,990 INR';
             document.getElementById('programNameByType').innerHTML = 'Junior Robotics Program - 3 Boxes';
 
         } else {
             document.getElementById('juniorProgramButton').style.display = 'none';
+            document.getElementById('juniorProgramButtonM').style.display = 'none';
+
             document.getElementById('seniorProgramButton').style.display = 'block';
+            document.getElementById('seniorProgramButtonM').style.display = 'block';
+
             document.getElementById('productPrice').innerHTML = '8,990 INR';
             document.getElementById('finalPrice').innerHTML = '8,990 INR';
             document.getElementById('programNameByType').innerHTML = '4,990 INR';
@@ -204,22 +297,23 @@
         }
     }
     renderCorrectBuyButton()
-    </script>
-    <script>
-        function postFormDataToGoogle () {
-            console.log('click captured');
-            const scriptURL = 'https://script.google.com/macros/s/AKfycbxEud14DdE_bA56J7ta7aBej65h2tn6Bfp7pM1fLSpN5kZhHZw/exec';
-            const form = document.forms['submit-to-google-sheet'];
-            fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-                .then(response => console.log('Success!', response))
-                .catch(error => console.error('Error!', error.message))
-        }
-    </script>
-    <script>
+</script>
+<script>
+    function postFormDataToGoogle() {
+        console.log('click captured');
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbxEud14DdE_bA56J7ta7aBej65h2tn6Bfp7pM1fLSpN5kZhHZw/exec';
+        const form = document.forms['submit-to-google-sheet'];
+        fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+            .then(response => console.log('Success!', response))
+            .catch(error => console.error('Error!', error.message))
+    }
+</script>
+<script>
     window.onscroll = function() { myFunction() };
     var navbar = document.getElementById("navbar");
     var sticky = navbar.offsetTop;
     var checkoutContainer = document.getElementById("checkoutContainer");
+
     function myFunction() {
         if (window.pageYOffset >= sticky) {
             navbar.classList.add("sticky")
@@ -241,11 +335,73 @@
         var key = event.keyCode;
         return ((key >= 65 && key <= 90) || key >= 97 && key <= 122);
     };
-    </script>
-    <script src="https://js.instamojo.com/v1/checkout.js"></script>
-    <!--    <script src="https://d2xwmjc4uy2hr5.cloudfront.net/im-embed/im-embed.min.js"></script>
- -->
-    <script src="https://js.instamojo.com/v1/button.js"></script>
+</script>
+<script src="https://js.instamojo.com/v1/checkout.js"></script>
+<script src="https://js.instamojo.com/v1/button.js"></script>
+<script type="text/javascript">
+    function showDiv(elem) {
+        if (elem.value == 1)
+            document.getElementById('cart').style.display = "block";
+        document.getElementById('shiping').style.display = "block";
+    }
+    $(function() {
+        $('#next-form').hide();
+        $('#cart').hide();
+        $('.desktop').change(function() {
+            if ($('.desktop').val() == 1) {
+                $('#next-form').show();
+                $('#cart').show();
+            } else {
+                $('#next-form').hide();
+                $('#cart').hide();
+            }
+        });
+    });
+    $(function() {
+        //$('#next-form').hide();
+
+        $('#shiping').hide();
+        $('#cart').hide();
+        $('.mobile').change(function() {
+            if ($('.mobile').val() == 1) {
+                $('#cart').show();
+                $('#shiping').show();
+            } else {
+                $('#shiping').hide();
+                $('#cart').hide();
+            }
+        });
+    });
+    $("#shiping").click(function() {
+        $("#next-form").show();
+        $(".proceed").show();
+    });
+</script>
+<script type="text/javascript">
+    (function($) {
+        var $window = $(window),
+            $html = $('.select-country');
+
+        function resize() {
+            if ($window.width() < 514) {
+                return $html.addClass('mobile').removeClass('desktop');
+            }
+            $html.removeClass('mobile').addClass('desktop');
+        }
+        $window
+            .resize(resize)
+            .trigger('resize');
+    })(jQuery);
+</script>
+<script type="text/javascript">
+    $("#ship-details").click(function() {
+        $("#next-form").show();
+    });
+    $("#ship-details").click(function() {
+        $(".shiping").hide();
+        $(".proceed").show();
+    });
+</script>
 </body>
 
 </html>

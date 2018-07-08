@@ -13,6 +13,88 @@ img {
     display: block;
 }
 
+a:hover {
+    text-decoration: none !important;
+}
+
+header#navbar {
+    border-bottom: 1px solid #d9d9d9;
+}
+
+.navbar-brand {
+    width: 25%;
+    text-align: center;
+}
+
+header {
+    padding: 20px 0px;
+}
+
+header nav h1 {
+    font-weight: 700;
+    font-size: 33px;
+}
+
+header nav .collapse a {
+    color: #00193a !important;
+    font-weight: 500;
+    padding: 15px 17px !important;
+    text-transform: uppercase;
+}
+
+header nav .btn-elemento-light-blue {
+    display: none;
+}
+
+header nav h1 span {
+    font-weight: 400;
+}
+
+header nav.navbar {
+    padding: 0px !important;
+}
+
+header nav .collapse {
+    /*margin-left: 98px;*/
+}
+
+header nav .collapse img {
+    max-width: 24px;
+    float: left;
+}
+
+header nav .collapse .navbar-nav a:last-child {
+    padding: 14px 15px!important;
+    border-radius: 2.25rem;
+    text-transform: uppercase;
+    font-weight: 500;
+    color: #007bff !important;
+}
+
+header nav .collapse .navbar-nav .btn-outline-primary:hover {
+    color: #fff !important;
+}
+
+header nav .collapse .navbar-nav .btn-outline-primary:focus {
+    box-shadow: none !important;
+}
+
+header nav .collapse button:focus {
+    box-shadow: unset !important;
+}
+.im-checkout-btn.btn--flat {
+    background: #00e6ac !important;
+    color: #fff !important;
+
+}
+.im-checkout-btn.btn--flat:focus, .im-checkout-btn.btn--flat:hover{
+    -webkit-box-shadow: 4px 4px 8px #aaaaaa !important;
+    -moz-box-shadow: 4px 4px 8px #aaaaaa !important;
+    box-shadow: 4px 4px 8px #aaaaaa !important;
+}
+.checkoutContainerPadding {
+    padding: 92px 0 10px 0;
+}
 .checkout1 .row {
     width: 100%;
     margin-right: 0px !important;
@@ -20,30 +102,25 @@ img {
 }
 
 .checkout1 .col-md-8 {
-    padding: 0 !important;
+    padding: 30px;
+}
+
+.checkout1 .row .col-md-8 #next-form {
+    display: none;
+}
+
+.checkout1 .row .col-md-8 .col-md-6 {
+    text-align: center;
 }
 
 .checkout1 .col-md-6 label {
     font-size: 20px;
+
     letter-spacing: 0.2px;
     color: #0f69e3;
     text-shadow: none;
     line-height: 2;
     font-weight: 600;
-}
-
-.im-checkout {
-    width: 250px !important;
-    margin: auto !important;
-}
-
-.im-checkout-btn.btn--flat {
-    background: #00e6ac !important;
-}
-
-.button,
-input {
-    outline: none;
 }
 
 .elemento-header {
@@ -66,16 +143,13 @@ input {
     color: #00193a;
 }
 
-.checkoutContainerPadding {
-    padding: 92px 0 10px 0;
-}
-
 section.checkout1 aside {
     background-color: #fafafa;
     padding-bottom: 70px;
 }
 
 section.checkout1 aside .card {
+    margin-right: 100px;
     border-top-right-radius: 10px;
     background-color: #ffffff;
     border: solid 1px #d9d9d9;
@@ -97,7 +171,7 @@ section.checkout1 aside .card span {
 
 section.checkout1 aside.col-md-4>p {
     font-weight: 500;
-    font-size: 20px;
+    font-size: 20px !important;
     letter-spacing: 0.3px;
     color: #00193a;
     margin: 24px 7px;
@@ -123,12 +197,17 @@ section.checkout1 aside.col-md-4 span p:nth-child(2) {
     margin-bottom: 0px;
 }
 
+section.checkout1 .col-md-8>.row>.col-md-6:first-child {
+    display: none;
+}
+
 section.checkout1 .col-md-6 form span {
-    position: relative;
+    position: absolute;
     display: block;
     opacity: 0.6;
-    top: 19px;
-    left: 21px;
+    top: 3px;
+    left: 35px;
+    text-align: left;
     font-size: 12px;
     font-weight: 500;
     letter-spacing: 0.1px;
@@ -138,25 +217,18 @@ section.checkout1 .col-md-6 form span {
 section.checkout1 .col-md-6 form select {
     border-radius: 28px;
     background-color: #ffffff;
-    border: solid 1px #00193a;
+    border: solid 1px #c0c6ce;
     padding: 18px 10px 16px 16px;
     height: auto !important;
     font-size: 16px;
-    opacity: 0.55;
     font-weight: 500;
     letter-spacing: 0.1px;
     color: #00193a;
 }
 
-.footer_container .elemento1 {
-    font-family: Avenir;
-    font-size: 36px;
-    font-weight: 900;
-    letter-spacing: -0.5px;
-    color: #00193a;
+.proceed {
+    display: none;
 }
-
-.footer_container span {}
 
 footer {
     background-color: #fff;
@@ -186,6 +258,14 @@ footer .container .col-8 .col-6 ul li {
     list-style: none;
 }
 
+footer .container .col-8 .col-6 ul li a {
+    color: #00193a;
+}
+
+footer .container .col-8 .col-6 ul li a:hover {
+    color: #007bff;
+}
+
 footer .container .col-4 {
     text-align: center;
     margin-bottom: 40px;
@@ -205,6 +285,19 @@ footer .container .col-4 p span {
     color: #0f69e3;
 }
 
+footer .container .col-4 p strong {
+    color: #00e6ac;
+    display: none;
+}
+
+footer form .has-success {
+    display: block !important;
+}
+
+footer form .has-warning {
+    display: none !important;
+}
+
 footer .container .col-4 .sbscribe:after {
     content: '';
     display: block;
@@ -220,40 +313,52 @@ footer .container .col-4 .sbscribe {
     width: 100%
 }
 
-footer .container .col-4 .sbscribe:focus span.add-email {
+footer .container .col-4 .sbscribe:focus div.add-email {
     display: none;
 }
 
-footer .container .col-4 .sbscribe:focus span.subs-email {
+footer .container .col-4 .sbscribe:focus div.subs-email {
     display: block;
 }
 
-footer .container .col-4 div span.add-email {
+footer .container .col-4 div div.add-email {
     float: right;
     color: #ffffff;
     background-color: #0f69e3;
     border-radius: 77px;
     display: block;
-    padding: 1px 12px;
-    font-style: normal;
-    font-size: 25px;
+    padding: 3px 7px;
+    font-size: 20px;
     position: absolute;
     right: 23px;
+    border: none;
     top: 72px;
 }
 
-footer .container .col-4 div span.subs-email {
+[type=reset],
+[type=submit],
+button,
+html [type=button] {
+    -webkit-appearance: none;
+}
+
+footer .container .col-4 div div.subs-email {
     float: right;
     display: none;
     color: #ffffff;
-    background-color: #0f69e3;
+    background-color: #00e6ac;
     border-radius: 77px;
-    padding: 1px 14px;
-    font-style: normal;
-    font-size: 25px;
+    padding: 4px 8px;
+    font-size: 20px;
     position: absolute;
-    right: 23px;
-    top: 72px;
+    right: 22px;
+    top: 71px;
+    border: none;
+}
+
+footer .container .col-4 div i {
+    position: relative;
+    top: 3px;
 }
 
 footer .container .col-4 .social {
@@ -307,11 +412,8 @@ footer .copyright {
 
 
 
-/*-----------------checkout-full----------------------*/
 
-.paymentButtonMargin {
-    margin-top: 10px;
-}
+/*-----------------checkout-full----------------------*/
 
 .full-length {
     border-radius: 28px;
@@ -330,11 +432,10 @@ footer .copyright {
 .form-select {
     border-radius: 28px;
     background-color: #ffffff;
-    border: solid 1px #00193a;
+    border: solid 1px #c0c6ce;
     padding: 18px 10px 16px 16px;
     height: auto !important;
     font-size: 16px;
-    opacity: 0.55;
     font-weight: 500;
     letter-spacing: 0.1px;
     color: #00193a;
@@ -390,6 +491,7 @@ span.shipping {
     display: block;
     opacity: 0.6;
     top: 8px;
+    z-index: 10;
     left: 21px;
     font-size: 12px;
     font-weight: 500;
@@ -399,8 +501,10 @@ span.shipping {
 
 .cc {
     font-size: 20px;
-    font-weight: normal;
+    font-weight: 500;
     font-style: normal;
+    text-align: left;
+    margin-top: 20px;
     font-stretch: normal;
     line-height: normal;
     letter-spacing: 0.2px;
@@ -408,7 +512,6 @@ span.shipping {
 }
 
 .form-group.half {
-    /* width: 100%; */
     width: 50%;
     float: left;
 }
@@ -470,21 +573,106 @@ span.shipping {
 }
 
 a.btn.btn-buy {
-    background-color: green;
     border-radius: 28px;
     background-color: rgb(0, 230, 172);
     color: #ffffff;
-    width: 80%;
+    width: 100%;
+    margin-top: 25px;
+    padding: 10px;
+}
+
+.al_box span {
+    padding: 0px !important;
+    display: unset !important;
     position: relative;
-    left: 40px;
-    top: 10px;
+    bottom: 7px;
+}
+
+.coupon i {
+    position: absolute;
+    right: 24px;
+    background-color: #d9d9d9;
+    top: 8px;
+    padding: 10px;
+    border-radius: 28px;
+    color: #fff;
+}
+
+.coupon>span {
+    display: none;
+    font-size: 15px;
+    position: absolute;
+    bottom: 70px;
+    left: 200px;
+    line-height: 1.6;
+    font-weight: 500;
+    letter-spacing: 0.2px;
+    text-align: center;
+    color: #00e6ac;
+}
+
+.coupon p {
+    opacity: 0.6;
+    display: none;
+    position: absolute;
+    left: 39px;
+    font-size: 12px;
+}
+
+.coupon .subs-coupon {
+    display: none;
+}
+
+.coupon .has-success {
+    display: block !important;
+}
+
+#next-form>.row .row:last-child .col-md-12 {
+    border-top: 1px solid #bfc5cd;
+    padding-top: 40px;
+    margin-top: 20px;
+}
+
+table .has-success {
+    display: table-row !important;
+}
+
+.coupon .has-warning {
+    display: none !important;
+}
+
+#cart {
+    display: none;
+}
+
+.cart {
+    margin: 0px 30px;
 }
 
 table {
     border-collapse: collapse;
-    position: relative;
-    left: 32px;
-    line-height: 2;
+    width: 100%;
+}
+
+table th {
+    opacity: 0.6;
+    font-weight: 500;
+    padding-bottom: 15px;
+    line-height: 1.38;
+    letter-spacing: 0.1px;
+    color: #00193a;
+}
+
+table tr.discount {
+    display: none;
+}
+
+table td {
+    font-weight: 500;
+    line-height: 1.38;
+    letter-spacing: 0.1px;
+    color: #00193a;
+    text-align: right;
 }
 
 p.al_box {
@@ -540,3 +728,49 @@ option {
     margin: 0px auto;
     padding: 20px 0px;
 }
+
+.btn-elemento-light-blue {
+    border-radius: 45px;
+    background-color: #0f69e3;
+    border: none;
+    color: #fff;
+    padding: 20px 30px;
+    font-weight: 600;
+    line-height: 1;
+    letter-spacing: 1.3px;
+    text-align: center;
+}
+
+.shiping {
+    display: none;
+}
+
+@media (max-width: 414px) {
+    .shiping {
+        display: block;
+    }
+    .sticky+.checkout1 {
+        padding-top: 70px;
+    }
+    .navbar-brand {
+        width: 45%;
+        text-align: center;
+    }
+    footer .copy {
+        position: absolute;
+        bottom: -800px;
+        width: 100%;
+    }
+    .checkout1 .col-md-8 {
+        padding: 0px 0px 20px 0px;
+    }
+    #next-form>.row .row:last-child .col-md-12 {
+        border-top: unset;
+        padding-top: 0px;
+        margin-top: 0px;
+    }
+    .coupon>span {
+        left: 228px;
+    }
+}
+
