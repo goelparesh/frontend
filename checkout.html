@@ -23,7 +23,7 @@
   var t = window.driftt = window.drift = window.driftt || [];
   if (!t.init) {
     if (t.invoked) return void (window.console && console.error && console.error("Drift snippet included twice."));
-    t.invoked = !0, t.methods = [ "identify", "config", "track", "reset", "debug", "show", "ping", "page", "hide", "off", "on" ], 
+    t.invoked = !0, t.methods = [ "identify", "config", "track", "reset", "debug", "show", "ping", "page", "hide", "off", "on" ],
     t.factory = function(e) {
       return function() {
         var n = Array.prototype.slice.call(arguments);
@@ -66,7 +66,7 @@ drift.load('ufmpy6we3eff');
                     </li>
                     <a class="nav-item nav-link" href="why.html">Why Us</a>
                     <a class="nav-item nav-link" href="team.html">Team</a>
-                     
+
                     <a class="nav-item nav-link" href="tel:977-390-4934">
                         <img src="images/call.png" alt=""> +91-97739 04934</a>
                     <a class="nav-item btn btn-outline-primary" href="robotics-program-for-kids.html">Get Elemento</a>
@@ -241,7 +241,7 @@ drift.load('ufmpy6we3eff');
                     </div>
                 </div>
             </div>
-            
+
         </div>
     </div>
     <!--  <div class="copy">
@@ -359,8 +359,10 @@ drift.load('ufmpy6we3eff');
         document.getElementById('shiping').style.display = "block";
     }
     $(function() {
-        $('#next-form').hide();
-        $('#cart').hide();
+        // $('#next-form').hide();
+        // $('#cart').hide();
+        $('#next-form').show();
+        $('#cart').show();
         $('.desktop').change(function() {
             if ($('.desktop').val() == 1) {
                 $('#next-form').show();
