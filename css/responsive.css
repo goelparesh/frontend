@@ -2253,9 +2253,9 @@
         background-color: #fff;
         padding: 16px 10px 0 10px;
         bottom: 0;
-        display: none;
         text-align: center;
         border-top: 1px solid #f0f0f0;
+
     }
     .proceed span {
         width: 20%;

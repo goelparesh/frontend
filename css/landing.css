@@ -80,8 +80,15 @@ header nav .collapse {
     .dropdown:hover>.dropdown-menu {
         display: block;
     }
+    .mobile-only {
+        display: none !important;
+    }
 }
-
+@media(max-width: 599px) {
+    .mobile-only {
+        display: block !important;
+    }
+}
 
 header nav .collapse img {
     max-width: 24px;

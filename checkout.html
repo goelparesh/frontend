@@ -83,7 +83,7 @@ drift.load('ufmpy6we3eff');
                     <h4>Call us for assistance</h4>
                     <button class="btn-elemento-transparent"><img src="images/call.png" alt="call"> <span>+91 97739 04934</span></button>
                 </div>
-                <div class="col-md-12" style="text-align: -webkit-center;padding-bottom: 20px;">
+                <div class="col-md-12" style="text-align: -webkit-center;padding-bottom: 20px;visibility: hidden;">
                     <span><label for="select">Select your country</label></span>
                     <span>
                             <form style="display: inline-block;">
@@ -148,7 +148,7 @@ drift.load('ufmpy6we3eff');
                     </div>
                     <div class="row">
                         <div class="col-md-12">
-                            <div class="row">
+                            <div class="row" style="visibility: hidden;">
                                 <div class="col-md-6">
                                     <p class="cc">Have a Coupon Code?</p>
                                 </div>
@@ -206,12 +206,12 @@ drift.load('ufmpy6we3eff');
                 </div>
             </div>
         </aside>
-        <div class="shiping" id="shiping">
+        <div class="shiping" id="shiping" style="visibility: hidden;">
             <button id="ship-details" class="btn-elemento-light-blue">ENTER SHIPPING DETAILS</button>
         </div>
     </div>
 </section>
-<div class="proceed" style="text-align: -webkit-center;">
+<div class="proceed mobile-only" style="text-align: -webkit-center;">
     <div id="juniorProgramButtonM" class="paymentButtonMargin" onclick="postFormDataToGoogle()">
         <a href="https://www.instamojo.com/elemento/elemento-labs-junior-robotics-program/?embed=form" rel="im-checkout" data-behaviour="remote" data-text="Proceed To Pay" data-style="flat"></a>
     </div>
@@ -376,8 +376,12 @@ drift.load('ufmpy6we3eff');
     $(function() {
         //$('#next-form').hide();
 
-        $('#shiping').hide();
-        $('#cart').hide();
+        // $('#shiping').hide();
+        // $('#cart').hide();
+        $('#cart').show();
+        $('#shiping').show();
+        $("#next-form").show();
+        $(".proceed").show();
         $('.mobile').change(function() {
             if ($('.mobile').val() == 1) {
                 $('#cart').show();
