@@ -15,34 +15,7 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!-- jQuery library -->
 
-    <!-- Start of Async Drift Code -->
-<script>
-"use strict";
-
-!function() {
-  var t = window.driftt = window.drift = window.driftt || [];
-  if (!t.init) {
-    if (t.invoked) return void (window.console && console.error && console.error("Drift snippet included twice."));
-    t.invoked = !0, t.methods = [ "identify", "config", "track", "reset", "debug", "show", "ping", "page", "hide", "off", "on" ],
-    t.factory = function(e) {
-      return function() {
-        var n = Array.prototype.slice.call(arguments);
-        return n.unshift(e), t.push(n), t;
-      };
-    }, t.methods.forEach(function(e) {
-      t[e] = t.factory(e);
-    }), t.load = function(t) {
-      var e = 3e5, n = Math.ceil(new Date() / e) * e, o = document.createElement("script");
-      o.type = "text/javascript", o.async = !0, o.crossorigin = "anonymous", o.src = "https://js.driftt.com/include/" + n + "/" + t + ".js";
-      var i = document.getElementsByTagName("script")[0];
-      i.parentNode.insertBefore(o, i);
-    };
-  }
-}();
-drift.SNIPPET_VERSION = '0.3.1';
-drift.load('ufmpy6we3eff');
-</script>
-<!-- End of Async Drift Code -->
+    
 </head>
 
 <body>
@@ -101,7 +74,7 @@ drift.load('ufmpy6we3eff');
                 <div class="col-md-12">
                     <form>
                         <div class="form-group">
-                            <input type="text" placeholder="Child’s Name" name="c_name" id="c_name" class="full-length">
+                            <input type="text" placeholder="Child’s Name for certificate" name="c_name" id="c_name" class="full-length">
                         </div>
                     </form>
                 </div>
@@ -118,7 +91,7 @@ drift.load('ufmpy6we3eff');
                                 <input type="text" placeholder="Last name (optional)" name="l_name" id="l_name" class="lname" onkeypress="return alphaOnly(event)">
                             </div>
                             <div class="form-group half">
-                                <input type="text" placeholder="Phone Number" name="number" id="number" class="number" onkeypress="return isNumberKey(event)" maxlength="10">
+                                <input type="text" placeholder="Phone Number (eg 9773904934)" name="number" id="number" class="number" onkeypress="return isNumberKey(event)" maxlength="10">
                             </div>
                             <div class="form-group half">
                                 <input type="email" placeholder="Email Address" name="e_mail" id="e_mail" class="email">
@@ -126,13 +99,11 @@ drift.load('ufmpy6we3eff');
                             <div class="form-group">
                                 <input type="text" placeholder="Address" name="address" id="address" class="full-length">
                             </div>
-                            <div class="form-group">
-                                <input type="text" placeholder="Apartment, suite, etc. (optional)" class="full-length">
-                            </div>
-                            <div class="form-group">
+                            
+                            <div class="form-group half">
                                 <input type="text" placeholder="City" name="city" id="city" class="full-length">
                             </div>
-                            <div class="form-group">
+                            <div class="form-group half">
                                 <input type="text" placeholder="State" name="state" id="state" class="full-length">
                             </div>
                             <div class="form-group half">
