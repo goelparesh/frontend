@@ -33,7 +33,7 @@
                             </div>
                         </li> <a class="nav-item nav-link" href="why.html">Why Us</a>
                         <a class="nav-item nav-link" href="team.html">Team</a>
-                         
+
                         <a class="nav-item nav-link" href="#">
                             <img src="images/call.png" alt=""> +91-9773904934</a>
                         <a class="nav-item btn btn-outline-primary" href="robotics-program-for-kids.html">BUY NOW</a>
@@ -334,7 +334,7 @@
                         </div>
                     </div>
                 </div>
-                 
+
             </div>
         </div>
         <div class="copy">
@@ -405,7 +405,7 @@
   var t = window.driftt = window.drift = window.driftt || [];
   if (!t.init) {
     if (t.invoked) return void (window.console && console.error && console.error("Drift snippet included twice."));
-    t.invoked = !0, t.methods = [ "identify", "config", "track", "reset", "debug", "show", "ping", "page", "hide", "off", "on" ], 
+    t.invoked = !0, t.methods = [ "identify", "config", "track", "reset", "debug", "show", "ping", "page", "hide", "off", "on" ],
     t.factory = function(e) {
       return function() {
         var n = Array.prototype.slice.call(arguments);
@@ -446,7 +446,7 @@ drift.load('ufmpy6we3eff');
                         </div>
                     </li> <a class="nav-item nav-link" href="why.html">Why Us</a>
                     <a class="nav-item nav-link" href="team.html">Team</a>
-                     
+
                     <a class="nav-item nav-link" href="tel:977-390-4934">
                         <img src="images/call.png" alt=""> +91-97739 04934</a>
                     <a class="nav-item btn btn-outline-primary" href="robotics-program-for-kids.html">BUY NOW</a>
@@ -475,7 +475,7 @@ drift.load('ufmpy6we3eff');
                     <div class="row">
                         <div class="col-6">
                             <p>3 Elemento Boxes</p>
-                            <h3>INR 4,990</h3>
+                            <h3 id="juniorProgramPrice">INR 4,990</h3>
                             <!--<button data-toggle="modal" data-target="#myModal" type="button">Change Country</button>-->
                             <div id="myModal" class="modal fade" role="dialog">
                                 <div class="modal-dialog">
@@ -520,7 +520,7 @@ drift.load('ufmpy6we3eff');
                     <div class="row">
                         <div class="col-6">
                             <p>3 Elemento Boxes</p>
-                            <h3>INR 8,990</h3>
+                            <h3 id="seniorProgramPrice">INR 8,990</h3>
                             <!--<button data-toggle="modal" data-target="#myModal" type="button">Change Country</button>-->
                             <div id="myModal" class="modal fade" role="dialog">
                                 <div class="modal-dialog">
@@ -572,7 +572,7 @@ drift.load('ufmpy6we3eff');
                                 <div class="row">
                                     <div class="col-6">
                                         <p>3 Elemento Boxes</p>
-                                        <h3>INR 4,990</h3>
+                                        <h3 id="juniorProgramPrice">INR 4,990</h3>
                                         <button data-toggle="modal" data-target="#myModal" type="button">Change Country</button>
                                         <div id="myModal" class="modal fade" role="dialog">
                                             <div class="modal-dialog">
@@ -619,7 +619,7 @@ drift.load('ufmpy6we3eff');
                                 <div class="row">
                                     <div class="col-6">
                                         <p>3 Elemento Boxes</p>
-                                        <h3>INR 8,990</h3>
+                                        <h3 id="seniorProgramPrice">INR 8,990</h3>
                                         <button data-toggle="modal" data-target="#myModal" type="button">Change Country</button>
                                         <div id="myModal" class="modal fade" role="dialog">
                                             <div class="modal-dialog">
@@ -754,7 +754,7 @@ drift.load('ufmpy6we3eff');
                         </div>
                     </div>
                 </div>
-                 
+
             </div>
         </div>
         <div class="copy">
@@ -767,7 +767,8 @@ drift.load('ufmpy6we3eff');
             </div>
         </div>
     </footer>
-    <script src="js/jquery-3.2.1.slim.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <!--<script src="js/jquery-3.2.1.slim.min.js"></script>-->
     <script src="js/popper.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
 
@@ -786,6 +787,18 @@ drift.load('ufmpy6we3eff');
             $('form .subs-email').addClass('has-success').removeClass('has-warning');
         }
     });
+    function ipLookUp () {
+        $.getJSON('https://ipapi.co/json/', function(response) {
+            console.log(JSON.stringify(response, null, 2));
+            if(response.country.toLowerCase() !== 'in') {
+                document.getElementById('juniorProgramPrice').style.visibility = 'hidden';
+                document.getElementById('seniorProgramPrice').style.visibility = 'hidden';
+                // document.getElementById('seniorProgramPrice').style.visibility = 'hidden';
+            }
+        });
+    }
+
+    const clientCountry = ipLookUp();
     </script>
     <script>
     window.onscroll = function() { myFunction() };

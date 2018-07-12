@@ -19,7 +19,7 @@
   var t = window.driftt = window.drift = window.driftt || [];
   if (!t.init) {
     if (t.invoked) return void (window.console && console.error && console.error("Drift snippet included twice."));
-    t.invoked = !0, t.methods = [ "identify", "config", "track", "reset", "debug", "show", "ping", "page", "hide", "off", "on" ], 
+    t.invoked = !0, t.methods = [ "identify", "config", "track", "reset", "debug", "show", "ping", "page", "hide", "off", "on" ],
     t.factory = function(e) {
       return function() {
         var n = Array.prototype.slice.call(arguments);
@@ -60,7 +60,7 @@ drift.load('ufmpy6we3eff');
                             </div>
                         </li> <a class="nav-item nav-link" href="why.html">Why Us</a>
                         <a class="nav-item nav-link" href="team.html">Team</a>
-                         
+
                         <a class="nav-item nav-link" href="tel:977-390-4934">
                             <img src="images/call.png" alt=""> +91-97739 04934</a>
                         <a class="nav-item btn btn-outline-primary" href="robotics-program-for-kids.html">BUY NOW</a>
@@ -167,27 +167,27 @@ drift.load('ufmpy6we3eff');
                 <div class="col-4">
                     <div class="card-panel">
                         <img src="images/2wdrobocar.jpg" alt="">
-                        
+
                     </div>
                 </div>
                 <div class="col-4">
                     <div class="card-panel-02">
                         <img src="images/brushbot.jpg" alt="">
-                        
+
                     </div>
                 </div>
                 <div class="col-4">
                     <div class="card-panel">
                         <img src="images/virtualreality.png" alt="">
-                        
+
                     </div>
                 </div>
             </div>
-            
+
             <div class="row buy-now" id="buy-now">
                 <div class="col-6">
                     <p>Junior Program (3 Elemento Boxes)</p>
-                    <h4>INR 4,990</h4>
+                    <h4 id="juniorProgramPrice">INR 4,990</h4>
                     <!--                     <span data-toggle="modal" data-target="#myModal">Change Country</span> -->
                     <!-- <div id="myModal" class="modal fade" role="dialog">
                         <div class="modal-dialog">
@@ -282,7 +282,9 @@ drift.load('ufmpy6we3eff');
             </div>
         </div>
     </footer>
-    <script src="js/jquery-3.2.1.slim.min.js"></script>
+    <!--<script src="js/jquery-3.2.1.slim.min.js"></script>-->
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+
     <script src="js/popper.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script>
@@ -306,6 +308,16 @@ drift.load('ufmpy6we3eff');
             wrap.classList.remove("fix-search");
         }
     }
+    function ipLookUp () {
+        $.getJSON('https://ipapi.co/json/', function(response) {
+            console.log(JSON.stringify(response, null, 2));
+            if(response.country.toLowerCase() !== 'in') {
+                document.getElementById('juniorProgramPrice').style.visibility = 'hidden';
+            }
+        });
+    }
+
+    const clientCountry = ipLookUp();
     </script>
 </body>
 

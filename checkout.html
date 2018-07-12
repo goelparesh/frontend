@@ -15,7 +15,7 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!-- jQuery library -->
 
-    
+
 </head>
 
 <body>
@@ -56,22 +56,18 @@
                     <h4>Call us for assistance</h4>
                     <button class="btn-elemento-transparent"><img src="images/call.png" alt="call"> <span>+91 97739 04934</span></button>
                 </div>
-                <div class="col-md-12" style="text-align: -webkit-center;padding-bottom: 20px;visibility: hidden;">
+                <div class="col-md-12" id="countrySelectionContainer" style="text-align: -webkit-center;padding-bottom: 20px;visibility: hidden;">
                     <span><label for="select">Select your country</label></span>
                     <span>
                             <form style="display: inline-block;">
-                            <select class="select-country form-control">
-                                <!-- onchange="showDiv(this)"> -->
-                                <option value="0">Select Country</option>
-                                <option value="1">India</option>
-                                <!--   <option value="1">South Africa</option>
-                                <option value="1">Germany</option> -->
-                            </select>
+                           <select name="country" class="countries order-alpha presel-byip " id="countryId">
+    <option value="">Select Country</option>
+</select>
                         </form></span>
                 </div>
             </div>
             <div class="row" id="next-form">
-                
+
                 <div class="row">
                     <div class="col-md-12">
                         <form name="submit-to-google-sheet">
@@ -81,11 +77,11 @@
                             <div class="form-group half">
                                 <input type="text" placeholder="Name" name="f_name" id="f_name" class="fname" onkeypress="return alphaOnly(event)">
                             </div>
-                        
+
                             <div class="form-group half">
                                 <input type="email" placeholder="Email Address" name="e_mail" id="e_mail" class="email">
                             </div>
-                        
+
                         </form>
                     </div>
                     <div class="row">
@@ -120,7 +116,7 @@
                      <p id="programNameByType"></p><br>
                   </span>
                 <div class="cart" id="cart">
-                    
+
                     <hr>
                     <table>
                         <tr>
@@ -196,21 +192,25 @@
         </div>
      </div> -->
 </footer>
-<script src="js/jquery-3.3.1.slim.min.js"></script>
+<!--<script src="js/jquery-3.3.1.slim.min.js"></script>-->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 
-<script type="text/javascript">
-    $('.add-coupon').on('click', function() {
-        if ($(this).val() == '') {
-            $('.coupon span').addClass('has-success').removeClass('has-warning');
-            $('.coupon p').addClass('has-success').removeClass('has-warning');
-            $('table .discount').addClass('has-success').removeClass('has-warning');
-            $('.coupon .subs-coupon').addClass('has-success').removeClass('has-warning');
-        }
-    });
-</script>
-<script src="js/jquery-3.3.1.slim.min.js"></script>
+<!--<script type="text/javascript">-->
+    <!--$('.add-coupon').on('click', function() {-->
+        <!--if ($(this).val() == '') {-->
+            <!--$('.coupon span').addClass('has-success').removeClass('has-warning');-->
+            <!--$('.coupon p').addClass('has-success').removeClass('has-warning');-->
+            <!--$('table .discount').addClass('has-success').removeClass('has-warning');-->
+            <!--$('.coupon .subs-coupon').addClass('has-success').removeClass('has-warning');-->
+        <!--}-->
+    <!--});-->
+<!--</script>-->
+<!--<script src="js/jquery-3.3.1.slim.min.js"></script>-->
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+<script src="https://geodata.solutions/includes/countrystate.js"></script>
+
+
 <script src="js/popper.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -354,6 +354,18 @@
             .resize(resize)
             .trigger('resize');
     })(jQuery);
+    function ipLookUp () {
+
+        $.getJSON('https://ipapi.co/json/', function(response) {
+            console.log(JSON.stringify(response, null, 2));
+            if(response.country.toLowerCase() !== 'in') {
+                document.getElementById('countrySelectionContainer').style.visibility = 'visible';
+                // document.getElementById('seniorProgramPrice').style.visibility = 'hidden';
+            }
+        });
+    }
+
+    const clientCountry = ipLookUp();
 </script>
 <script type="text/javascript">
     $("#ship-details").click(function() {
