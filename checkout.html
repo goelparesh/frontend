@@ -70,9 +70,9 @@
                     <span><label for="select">Select your country</label></span>
                     <span>
                             <form style="display: inline-block;">
-                           <select name="country" class="countries order-alpha presel-byip " id="countryId">
-    <option value="">Select Country</option>
-</select>
+                           <select name="country" class="custom-select countries order-alpha presel-byip " id="countryId" onchange="onCountryReselect()">
+                                <option value="">Select Country</option>
+                            </select>
                         </form></span>
                 </div>
             </div>
@@ -85,11 +85,32 @@
                             <br>
                             <br>
                             <div class="form-group half">
-                                <input type="text" placeholder="Name" name="f_name" id="f_name" class="fname" onkeypress="return alphaOnly(event)">
+                                <input type="text" placeholder="First Name" name="f_name" id="f_name" class="fname" onkeypress="return alphaOnly(event)">
                             </div>
 
                             <div class="form-group half">
+                                <input type="text" placeholder="Last name (optional)" name="l_name" id="l_name" class="lname" onkeypress="return alphaOnly(event)">
+                            </div>
+                            <div class="form-group half optional-field">
+                                <input type="text" placeholder="Phone Number" name="number" id="number" class="number" onkeypress="return isNumberKey(event)" maxlength="10">
+                            </div>
+                            <div class="form-group half">
                                 <input type="email" placeholder="Email Address" name="e_mail" id="e_mail" class="email">
+                            </div>
+                            <div class="form-group optional-field">
+                                <input type="text" placeholder="Address" name="address" id="address" class="full-length">
+                            </div>
+                            <div class="form-group optional-field">
+                                <input type="text" placeholder="Apartment, suite, etc. (optional)" class="full-length" id="op_address">
+                            </div>
+                            <div class="form-group optional-field">
+                                <input type="text" placeholder="City" name="city" id="city" class="full-length">
+                            </div>
+                            <div class="form-group optional-field">
+                                <input type="text" placeholder="State" name="state" id="state" class="full-length">
+                            </div>
+                            <div class="form-group half optional-field">
+                                <input type="number" placeholder="Zip Code" name="zipCode" id="zipCode" class="zcode" maxlength="6">
                             </div>
 
                         </form>
@@ -104,7 +125,7 @@
                                     <div class="coupon">
                                         <span>Coupon Applied!</span>
                                         <p>Coupon Code</p>
-                                        <input type="text" placeholder="Coupon Code" name="f_name" id="f_name" class="coupan">
+                                        <input type="text" placeholder="Coupon Code" name="coupon_name" id="coupon_name" class="coupan">
                                         <div class="add-coupon"><i class="material-icons">check</i></div>
                                         <div class="subs-coupon"><i class="material-icons">clear</i></div>
                                     </div>
@@ -137,7 +158,7 @@
                         <tr>
                             <th>Shipping</th>
                             <th></th>
-                            <th>FREE</th>
+                            <th id="shippingPrice">FREE</th>
                         </tr>
                         <tr>
                             <th>You Pay</th>
@@ -219,7 +240,89 @@
 <!--<script src="js/jquery-3.3.1.slim.min.js"></script>-->
 <script src="js/jquery-3.1.1.min.js"></script>
 <script src="https://geodata.solutions/includes/countrystate.js"></script>
+<script>
+    let pricingObj = {}
+    const uri = new URL(window.location.href);
+    const product = uri.searchParams.get("productId");
+    const UrlBasedOnProductType = (product === 'junior-robotics') ? 'pricing_jr.json' : 'pricing_sr.json';
+    $.ajax({
+        //The URL to process the request
+        'url' : UrlBasedOnProductType,
+        'mimeType': "application/json",
+        //The type of request, also known as the "method" in HTML forms
+        //Can be 'GET' or 'POST'
+        'type' : 'GET',
+        //Any post-data/get-data parameters
+        //The response from the server
+        'success' : function(data) {
+            console.log(data);
+            pricingObj = data;
+            //You can use any jQuery/JavaScript here!!!
+        }
+    });
 
+    let currentCurrenyObj = {};
+    let currentCountry = ''
+    function ipLookUp () {
+        $.getJSON('https://ipapi.co/json/', function(response) {
+           // httpGetAsync('pricing_jr.json');
+            const ipObj = response;
+            currentCountry = ipObj.country;
+            renderPricing();
+            checkOptionalFieldstoRender(response.country)
+        });
+    }
+    ipLookUp();
+    function checkOptionalFieldstoRender(code) {
+        let coll=document.getElementsByClassName('optional-field');
+        if(code.toLowerCase() !== 'in') {
+            for(let i=0, len=coll.length; i<len; i++)
+            {
+                coll[i].style["display"] = "block";
+            }
+        }
+        else {
+            for(let i=0, len=coll.length; i<len; i++)
+            {
+                coll[i].style["display"] = "none";
+            }
+        }
+    }
+    function onCountryReselect() {
+        var countryCode = $('#countryId option:selected').attr('countryId');
+        checkOptionalFieldstoRender(countryCode);
+        for(let i=0; i < pricingObj.length; i++) {
+            if(pricingObj[i].countryId === countryCode) {
+                currentCurrenyObj = pricingObj[i];
+                break;
+            }
+            else {
+                currentCurrenyObj = pricingObj[0];
+            }
+        }
+        document.getElementById('productPrice').innerHTML = currentCurrenyObj.sp;
+        document.getElementById('finalPrice').innerHTML = currentCurrenyObj.sp;
+        document.getElementById('shippingPrice').innerHTML = currentCurrenyObj.ship;
+
+    }
+
+    function renderPricing() {
+        for(let i=0; i < pricingObj.length; i++) {
+            if(pricingObj[i].countryId === currentCountry) {
+                currentCurrenyObj = pricingObj[i];
+                break;
+            }
+            else {
+                currentCurrenyObj = pricingObj[0];
+            }
+        }
+        document.getElementById('productPrice').innerHTML = currentCurrenyObj.sp;
+        document.getElementById('finalPrice').innerHTML = currentCurrenyObj.sp;
+        document.getElementById('shippingPrice').innerHTML = currentCurrenyObj.ship;
+
+    }
+
+</script>
 
 <script src="js/popper.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
@@ -243,8 +346,8 @@
             document.getElementById('seniorProgramButton').style.display = 'none';
             document.getElementById('seniorProgramButtonM').style.display = 'none';
 
-            document.getElementById('productPrice').innerHTML = '4,990 INR';
-            document.getElementById('finalPrice').innerHTML = '4,990 INR';
+            // document.getElementById('productPrice').innerHTML = '4,990 INR';
+            // document.getElementById('finalPrice').innerHTML = '4,990 INR';
             document.getElementById('programNameByType').innerHTML = 'Junior Robotics Program - 3 Boxes';
 
         } else {
@@ -364,17 +467,6 @@
             .resize(resize)
             .trigger('resize');
     })(jQuery);
-    function ipLookUp () {
-        $.getJSON('https://ipapi.co/json/', function(response) {
-            console.log(JSON.stringify(response, null, 2));
-            // if(response.country.toLowerCase() !== 'in') {
-            //     document.getElementById('countrySelectionContainer').style.visibility = 'visible';
-            //     // document.getElementById('seniorProgramPrice').style.visibility = 'hidden';
-            // }
-        });
-    }
-
-    const clientCountry = ipLookUp();
 </script>
 <script type="text/javascript">
     $("#ship-details").click(function() {
