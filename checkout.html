@@ -56,7 +56,7 @@
                     <h4>Call us for assistance</h4>
                     <button class="btn-elemento-transparent"><img src="images/call.png" alt="call"> <span>+91 97739 04934</span></button>
                 </div>
-                <div class="col-md-12" id="countrySelectionContainer" style="text-align: -webkit-center;padding-bottom: 20px;visibility: hidden;">
+                <div class="col-md-12" id="countrySelectionContainer" style="text-align: -webkit-center;padding-bottom: 20px;">
                     <span><label for="select">Select your country</label></span>
                     <span>
                             <form style="display: inline-block;">
@@ -207,7 +207,7 @@
     <!--});-->
 <!--</script>-->
 <!--<script src="js/jquery-3.3.1.slim.min.js"></script>-->
-<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+<script src="js/jquery-3.1.1.min.js"></script>
 <script src="https://geodata.solutions/includes/countrystate.js"></script>
 
 
@@ -355,13 +355,12 @@
             .trigger('resize');
     })(jQuery);
     function ipLookUp () {
-
         $.getJSON('https://ipapi.co/json/', function(response) {
             console.log(JSON.stringify(response, null, 2));
-            if(response.country.toLowerCase() !== 'in') {
-                document.getElementById('countrySelectionContainer').style.visibility = 'visible';
-                // document.getElementById('seniorProgramPrice').style.visibility = 'hidden';
-            }
+            // if(response.country.toLowerCase() !== 'in') {
+            //     document.getElementById('countrySelectionContainer').style.visibility = 'visible';
+            //     // document.getElementById('seniorProgramPrice').style.visibility = 'hidden';
+            // }
         });
     }
 
