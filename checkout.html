@@ -165,7 +165,6 @@
                             <th>You Pay</th>
                             <th></th>
                             <th id="finalPrice"></th>
-                            <th id="currencyCode"></th>
                         </tr>
                     </table>
                     <div id="juniorProgramButton" class="paymentButtonMargin indian-pg" onclick="postFormDataToGoogle()">
@@ -331,6 +330,7 @@
     function onCountryReselect() {
         var countryCode = $('#countryId option:selected').attr('countryId');
         checkOptionalFieldstoRender(countryCode);
+        renderPaymentButton(countryCode);
         for(let i=0; i < pricingObj.length; i++) {
             if(pricingObj[i].countryId === countryCode) {
                 currentCurrenyObj = pricingObj[i];
@@ -386,9 +386,14 @@
 
     renderForeignCheckoutButton = function() {
         document.getElementById('foreignCheckoutButton').style.display = 'block';
+        document.getElementById('seniorProgramButton').style.display = 'none';
+        document.getElementById('seniorProgramButtonM').style.display = 'none';
+        document.getElementById('juniorProgramButton').style.display = 'none';
+        document.getElementById('juniorProgramButtonM').style.display = 'none';
     };
 
     renderCorrectBuyButton = function() {
+        document.getElementById('foreignCheckoutButton').style.display = 'none';
         if (productType === 'junior-robotics') {
             document.getElementById('juniorProgramButton').style.display = 'block';
             document.getElementById('juniorProgramButtonM').style.display = 'block';
