@@ -178,7 +178,7 @@
                             <input type='hidden' name='sid' value='203687042' />
                             <input type='hidden' name='mode' value='2CO' />
                             <input type='hidden' name='li_0_type' value='product' />
-                            <input type='hidden' name='li_0_name' value='invoice123' />
+                            <input type='hidden' name='li_0_name' value='ElementoLabs' />
                             <input type='hidden' name='li_0_price' value='' id="li_0_price" />
                             <input type='hidden' name='li_0_tangible' value='Y' />
                             <input type='hidden' name='li_1_type' value='shipping' />
@@ -191,13 +191,13 @@
                             <input type='hidden' name='state' value='' id="li_state" />
                             <input type='hidden' name='zip' value='' id="zip" />
                             <input type='hidden' name='country' value='' id="country" />
-                            <input type='hidden' name='ship_name' value='Checkout Shopper' />
-                            <input type='hidden' name='ship_street_address' value='123 Test Address' />
-                            <input type='hidden' name='ship_street_address2' value='Suite 200' />
-                            <input type='hidden' name='ship_city' value='Columbus' />
-                            <input type='hidden' name='ship_state' value='OH' />
-                            <input type='hidden' name='ship_zip' value='43228' />
-                            <input type='hidden' name='ship_country' value='USA' />
+                            <input type='hidden' name='ship_name' value='' id="ship_name" />
+                            <input type='hidden' name='ship_street_address' value='' id="ship_street_address" />
+                            <input type='hidden' name='ship_street_address2' value='' id="ship_street_address2" />
+                            <input type='hidden' name='ship_city' value='' id="ship_city" />
+                            <input type='hidden' name='ship_state' value='' id="ship_state" />
+                            <input type='hidden' name='ship_zip' value='' id="ship_zip" />
+                            <input type='hidden' name='ship_country' value='USA' id="ship_country "/>
                             <input type='hidden' name='email' value='' id="email"/>
                             <input type='hidden' name='phone' value='' id="phone"/>
                             <input name='submit' type='submit' value='Checkout' style="width: 100%;
@@ -544,6 +544,14 @@
             document.getElementById('phone').value = document.getElementById('number').value;
             document.getElementById('li_1_price').value = document.getElementById('shippingPrice').innerHTML;
             document.getElementById('country').value = document.getElementById('countryId').value;
+
+            document.getElementById('ship_name').value = document.getElementById('f_name').value;
+            document.getElementById('ship_street_address').value = document.getElementById('address').value;
+            document.getElementById('ship_street_address2').value = document.getElementById('op_address').value;
+            document.getElementById('ship_city').value = document.getElementById('city').value;
+            document.getElementById('ship_state').value = document.getElementById('state').value;
+            document.getElementById('ship_zip').value = document.getElementById('zipCode').value;
+            document.getElementById('ship_country').value = document.getElementById('countryId').value;
 
         });
     });
