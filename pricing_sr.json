@@ -1,19 +1,19 @@
 [{
   "countryId": "IN",
   "currency": "INR",
-  "sp": "8,990 INR",
-  "cp": "9,990 INR",
+  "sp": "8,990",
+  "fp": "9,990",
   "ship": "FREE"
 },{
   "countryId": "US",
   "currency": "USD",
-  "sp": "131.25 USD",
-  "cp": "141.25 USD",
-  "ship": "20 USD"
+  "sp": "131.25",
+  "fp": "151.25",
+  "ship": "20"
 }, {
   "countryId": "SG",
   "currency": "SGD",
-  "sp": "179.21 SGD",
-  "cp": "189.21 SGD",
-  "ship": "20 SGD"
+  "sp": "179.21",
+  "fp": "199.21",
+  "ship": "20"
 }]

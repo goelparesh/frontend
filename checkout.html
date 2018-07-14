@@ -80,7 +80,7 @@
 
                 <div class="row">
                     <div class="col-md-12">
-                        <form name="submit-to-google-sheet">
+                        <form name="submit-to-google-sheet" id="shippingForm">
                             <span class="shipping">Parent's Details</span>
                             <br>
                             <br>
@@ -154,6 +154,7 @@
                             <th>Price</th>
                             <th></th>
                             <th id="productPrice"></th>
+                            <th id="currencyCode"></th>
                         </tr>
                         <tr>
                             <th>Shipping</th>
@@ -164,13 +165,58 @@
                             <th>You Pay</th>
                             <th></th>
                             <th id="finalPrice"></th>
+                            <th id="currencyCode"></th>
                         </tr>
                     </table>
-                    <div id="juniorProgramButton" class="paymentButtonMargin" onclick="postFormDataToGoogle()">
+                    <div id="juniorProgramButton" class="paymentButtonMargin indian-pg" onclick="postFormDataToGoogle()">
                         <a href="https://www.instamojo.com/elemento/elemento-labs-junior-robotics-program/?embed=form" rel="im-checkout" data-behaviour="remote" data-text="Proceed To Pay" data-style="flat"></a>
                     </div>
-                    <div id="seniorProgramButton" class="paymentButtonMargin" onclick="postFormDataToGoogle()">
+                    <div id="seniorProgramButton" class="paymentButtonMargin indian-pg" onclick="postFormDataToGoogle()">
                         <a href="https://www.instamojo.com/elemento/elemento-3-month-program/?embed=form" class="btn btn-buy" rel="im-checkout" data-behaviour="remote" data-text="Proceed to Pay" type="sumbit" data-style="flat"></a>
+                    </div>
+                    <div id="foreignCheckoutButton">
+                        <form action='https://www.2checkout.com/checkout/purchase' method='post' id="pgParams">
+                            <input type='hidden' name='sid' value='203687042' />
+                            <input type='hidden' name='mode' value='2CO' />
+                            <input type='hidden' name='li_0_type' value='product' />
+                            <input type='hidden' name='li_0_name' value='invoice123' />
+                            <input type='hidden' name='li_0_price' value='' id="li_0_price" />
+                            <input type='hidden' name='li_0_tangible' value='Y' />
+                            <input type='hidden' name='li_1_type' value='shipping' />
+                            <input type='hidden' name='li_1_name' value='Express Shipping' />
+                            <input type='hidden' name='li_1_price' value='' id="li_1_price" />
+                            <input type='hidden' name='card_holder_name' value='' id="card_holder_name" />
+                            <input type='hidden' name='street_address' value='' id="street_address" />
+                            <input type='hidden' name='street_address2' value='' id="street_address2" />
+                            <input type='hidden' name='city' value='' id="li_city" />
+                            <input type='hidden' name='state' value='' id="li_state" />
+                            <input type='hidden' name='zip' value='' id="zip" />
+                            <input type='hidden' name='country' value='' id="country" />
+                            <input type='hidden' name='ship_name' value='Checkout Shopper' />
+                            <input type='hidden' name='ship_street_address' value='123 Test Address' />
+                            <input type='hidden' name='ship_street_address2' value='Suite 200' />
+                            <input type='hidden' name='ship_city' value='Columbus' />
+                            <input type='hidden' name='ship_state' value='OH' />
+                            <input type='hidden' name='ship_zip' value='43228' />
+                            <input type='hidden' name='ship_country' value='USA' />
+                            <input type='hidden' name='email' value='' id="email"/>
+                            <input type='hidden' name='phone' value='' id="phone"/>
+                            <input name='submit' type='submit' value='Checkout' style="width: 100%;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    text-decoration: none;
+    cursor: pointer;
+    text-align: center;
+    display: block;
+                            transition: 0.3s;
+                            background: #00e6ac !important;
+                            color: #fff !important;
+                            text-shadow: none;
+                            border-radius: 1.5em;
+                            padding: 0.6em 1em;" id="foreignCheckout" />
+                        </form>
                     </div>
                 </div>
             </div>
@@ -213,15 +259,7 @@
 
         </div>
     </div>
-    <!--  <div class="copy">
-        <div class="container">
-           <div class="row">
-              <div class="col-12">
-                 <p class="copyright">Copyright &copy; 2018 Elemento</p>
-              </div>
-           </div>
-        </div>
-     </div> -->
+
 </footer>
 <!--<script src="js/jquery-3.3.1.slim.min.js"></script>-->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
@@ -275,6 +313,8 @@
     ipLookUp();
     function checkOptionalFieldstoRender(code) {
         let coll=document.getElementsByClassName('optional-field');
+        let indianPgBtn = document.getElementsByClassName('indian-pg');
+        renderPaymentButton(code);
         if(code.toLowerCase() !== 'in') {
             for(let i=0, len=coll.length; i<len; i++)
             {
@@ -301,8 +341,9 @@
             }
         }
         document.getElementById('productPrice').innerHTML = currentCurrenyObj.sp;
-        document.getElementById('finalPrice').innerHTML = currentCurrenyObj.sp;
+        document.getElementById('finalPrice').innerHTML = currentCurrenyObj.fp;
         document.getElementById('shippingPrice').innerHTML = currentCurrenyObj.ship;
+        document.getElementById('currencyCode').innerHTML = currentCurrenyObj.currency;
 
     }
 
@@ -317,7 +358,8 @@
             }
         }
         document.getElementById('productPrice').innerHTML = currentCurrenyObj.sp;
-        document.getElementById('finalPrice').innerHTML = currentCurrenyObj.sp;
+        document.getElementById('finalPrice').innerHTML = currentCurrenyObj.fp;
+        document.getElementById('currencyCode').innerHTML = currentCurrenyObj.currency;
         document.getElementById('shippingPrice').innerHTML = currentCurrenyObj.ship;
 
     }
@@ -334,9 +376,17 @@
     document.getElementById('seniorProgramButton').style.display = 'none';
     document.getElementById('seniorProgramButtonM').style.display = 'none';
 
+    document.getElementById('foreignCheckoutButton').style.display = 'none';
+
     const url = new URL(window.location.href);
     const productType = url.searchParams.get("productId");
     //jp 1 for junior program & sp1 for sr. program
+
+
+
+    renderForeignCheckoutButton = function() {
+        document.getElementById('foreignCheckoutButton').style.display = 'block';
+    };
 
     renderCorrectBuyButton = function() {
         if (productType === 'junior-robotics') {
@@ -365,7 +415,14 @@
 
         }
     }
-    renderCorrectBuyButton()
+    renderPaymentButton = function(code) {
+        if(code.toLowerCase() === 'in') {
+            renderCorrectBuyButton()
+        }
+        else {
+            renderForeignCheckoutButton()
+        }
+    }
 </script>
 <script>
     function postFormDataToGoogle() {
@@ -469,14 +526,25 @@
     })(jQuery);
 </script>
 <script type="text/javascript">
-    $("#ship-details").click(function() {
-        $("#next-form").show();
-    });
-    $("#ship-details").click(function() {
-        $(".shiping").hide();
-        $(".proceed").show();
+    $(function(){
+        $('#foreignCheckout').click(function(){
+            document.getElementById('li_0_price').value = document.getElementById('productPrice').innerHTML;
+            document.getElementById('card_holder_name').value = document.getElementById('f_name').value;
+            document.getElementById('street_address').value = document.getElementById('address').value;
+            document.getElementById('street_address2').value = document.getElementById('op_address').value;
+            document.getElementById('li_city').value = document.getElementById('city').value;
+            document.getElementById('li_state').value = document.getElementById('state').value;
+            document.getElementById('zip').value = document.getElementById('zipCode').value;
+            document.getElementById('email').value = document.getElementById('e_mail').value;
+            document.getElementById('phone').value = document.getElementById('number').value;
+            document.getElementById('li_1_price').value = document.getElementById('shippingPrice').innerHTML;
+            document.getElementById('country').value = document.getElementById('countryId').value;
+
+        });
     });
 </script>
+
+<script src="https://www.2checkout.com/static/checkout/javascript/direct.min.js"></script>
 </body>
 
 </html>
