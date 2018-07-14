@@ -153,8 +153,8 @@
                         <tr>
                             <th>Price</th>
                             <th></th>
-                            <th id="productPrice"></th>
                             <th id="currencyCode"></th>
+                            <th id="productPrice"></th>
                         </tr>
                         <tr>
                             <th>Shipping</th>
@@ -164,7 +164,9 @@
                         <tr>
                             <th>You Pay</th>
                             <th></th>
+                            <th id="currencyCode2"></th>
                             <th id="finalPrice"></th>
+
                         </tr>
                     </table>
                     <div id="juniorProgramButton" class="paymentButtonMargin indian-pg" onclick="postFormDataToGoogle()">
@@ -347,6 +349,7 @@
         document.getElementById('finalPrice').innerHTML = currentCurrenyObj.fp;
         document.getElementById('shippingPrice').innerHTML = currentCurrenyObj.ship;
         document.getElementById('currencyCode').innerHTML = currentCurrenyObj.currency;
+        document.getElementById('currencyCode2').innerHTML = currentCurrenyObj.currency;
         checkout2CountryCode = currentCurrenyObj.checkoutID;
 
     }
@@ -364,6 +367,7 @@
         document.getElementById('productPrice').innerHTML = currentCurrenyObj.sp;
         document.getElementById('finalPrice').innerHTML = currentCurrenyObj.fp;
         document.getElementById('currencyCode').innerHTML = currentCurrenyObj.currency;
+        document.getElementById('currencyCode2').innerHTML = currentCurrenyObj.currency;
         document.getElementById('shippingPrice').innerHTML = currentCurrenyObj.ship;
         checkout2CountryCode = currentCurrenyObj.checkoutID;
 
@@ -417,9 +421,9 @@
             document.getElementById('seniorProgramButton').style.display = 'block';
             document.getElementById('seniorProgramButtonM').style.display = 'block';
 
-            document.getElementById('productPrice').innerHTML = '8,990 INR';
-            document.getElementById('finalPrice').innerHTML = '8,990 INR';
-            document.getElementById('programNameByType').innerHTML = '4,990 INR';
+            document.getElementById('productPrice').innerHTML = '8990';
+            document.getElementById('finalPrice').innerHTML = '8990';
+            document.getElementById('programNameByType').innerHTML = '4990';
             document.getElementById('programNameByType').innerHTML = 'Senior Robotics Program - 3 Boxes';
 
 
