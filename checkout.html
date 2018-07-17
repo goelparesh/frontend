@@ -70,7 +70,7 @@
                     <span><label for="select">Select your country</label></span>
                     <span>
                             <form style="display: inline-block;">
-                           <select name="country" class="custom-select countries order-alpha presel-byip " id="countryId" onchange="onCountryReselect()">
+                           <select name="country" class="custom-select countries order-alpha limit-pop-1000000 presel-byip " id="countryId" onchange="onCountryReselect()">
                                 <option value="">Select Country</option>
                             </select>
                         </form></span>
@@ -81,7 +81,7 @@
                 <div class="row">
                     <div class="col-md-12">
                         <form name="submit-to-google-sheet" id="shippingForm">
-                            <span class="shipping">Parent's Details</span>
+                            <span class="shipping">Shipping Details</span>
                             <br>
                             <br>
                             <div class="form-group half">
@@ -153,8 +153,8 @@
                         <tr>
                             <th>Price</th>
                             <th></th>
-                            <th id="productPrice"></th>
                             <th id="currencyCode"></th>
+                            <th id="productPrice"></th>
                         </tr>
                         <tr>
                             <th>Shipping</th>
@@ -164,7 +164,9 @@
                         <tr>
                             <th>You Pay</th>
                             <th></th>
+                            <th id="currencyCode2"></th>
                             <th id="finalPrice"></th>
+
                         </tr>
                     </table>
                     <div id="juniorProgramButton" class="paymentButtonMargin indian-pg" onclick="postFormDataToGoogle()">
@@ -178,7 +180,7 @@
                             <input type='hidden' name='sid' value='203687042' />
                             <input type='hidden' name='mode' value='2CO' />
                             <input type='hidden' name='li_0_type' value='product' />
-                            <input type='hidden' name='li_0_name' value='ElementoLabs' />
+                            <input type='hidden' name='li_0_name' value='Elemento Labs' />
                             <input type='hidden' name='li_0_price' value='' id="li_0_price" />
                             <input type='hidden' name='li_0_tangible' value='Y' />
                             <input type='hidden' name='li_1_type' value='shipping' />
@@ -191,13 +193,15 @@
                             <input type='hidden' name='state' value='' id="li_state" />
                             <input type='hidden' name='zip' value='' id="zip" />
                             <input type='hidden' name='country' value='' id="country" />
+                            <input type='hidden' name='currency_code' value='' id="currency_code" />
+
                             <input type='hidden' name='ship_name' value='' id="ship_name" />
                             <input type='hidden' name='ship_street_address' value='' id="ship_street_address" />
                             <input type='hidden' name='ship_street_address2' value='' id="ship_street_address2" />
                             <input type='hidden' name='ship_city' value='' id="ship_city" />
                             <input type='hidden' name='ship_state' value='' id="ship_state" />
                             <input type='hidden' name='ship_zip' value='' id="ship_zip" />
-                            <input type='hidden' name='ship_country' value='' id="ship_country "/>
+                            <input type='hidden' name='ship_country' value='' id="ship_country"/>
                             <input type='hidden' name='email' value='' id="email"/>
                             <input type='hidden' name='phone' value='' id="phone"/>
                             <input name='submit' type='submit' value='Checkout' style="width: 100%;
@@ -300,6 +304,7 @@
 
     let currentCurrenyObj = {};
     let currentCountry = ''
+    let checkout2CountryCode = ''
     function ipLookUp () {
         $.getJSON('https://ipapi.co/json/', function(response) {
            // httpGetAsync('pricing_jr.json');
@@ -344,6 +349,8 @@
         document.getElementById('finalPrice').innerHTML = currentCurrenyObj.fp;
         document.getElementById('shippingPrice').innerHTML = currentCurrenyObj.ship;
         document.getElementById('currencyCode').innerHTML = currentCurrenyObj.currency;
+        document.getElementById('currencyCode2').innerHTML = currentCurrenyObj.currency;
+        checkout2CountryCode = currentCurrenyObj.checkoutID;
 
     }
 
@@ -360,7 +367,9 @@
         document.getElementById('productPrice').innerHTML = currentCurrenyObj.sp;
         document.getElementById('finalPrice').innerHTML = currentCurrenyObj.fp;
         document.getElementById('currencyCode').innerHTML = currentCurrenyObj.currency;
+        document.getElementById('currencyCode2').innerHTML = currentCurrenyObj.currency;
         document.getElementById('shippingPrice').innerHTML = currentCurrenyObj.ship;
+        checkout2CountryCode = currentCurrenyObj.checkoutID;
 
     }
 
@@ -412,9 +421,9 @@
             document.getElementById('seniorProgramButton').style.display = 'block';
             document.getElementById('seniorProgramButtonM').style.display = 'block';
 
-            document.getElementById('productPrice').innerHTML = '8,990 INR';
-            document.getElementById('finalPrice').innerHTML = '8,990 INR';
-            document.getElementById('programNameByType').innerHTML = '4,990 INR';
+            document.getElementById('productPrice').innerHTML = '8990';
+            document.getElementById('finalPrice').innerHTML = '8990';
+            document.getElementById('programNameByType').innerHTML = '4990';
             document.getElementById('programNameByType').innerHTML = 'Senior Robotics Program - 3 Boxes';
 
 
@@ -543,7 +552,9 @@
             document.getElementById('email').value = document.getElementById('e_mail').value;
             document.getElementById('phone').value = document.getElementById('number').value;
             document.getElementById('li_1_price').value = document.getElementById('shippingPrice').innerHTML;
-            document.getElementById('country').value = document.getElementById('countryId').value;
+            document.getElementById('country').value = checkout2CountryCode;
+            document.getElementById('currency_code').value = document.getElementById('currencyCode').innerHTML;
+
 
             document.getElementById('ship_name').value = document.getElementById('f_name').value;
             document.getElementById('ship_street_address').value = document.getElementById('address').value;
@@ -551,7 +562,7 @@
             document.getElementById('ship_city').value = document.getElementById('city').value;
             document.getElementById('ship_state').value = document.getElementById('state').value;
             document.getElementById('ship_zip').value = document.getElementById('zipCode').value;
-            document.getElementById('ship_country').value = document.getElementById('countryId').value;
+            document.getElementById('ship_country').value = checkout2CountryCode;
 
         });
     });

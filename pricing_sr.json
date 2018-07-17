@@ -1,19 +1,38 @@
 [{
-  "countryId": "IN",
-  "currency": "INR",
-  "sp": "8,990",
-  "fp": "9,990",
-  "ship": "FREE"
-},{
   "countryId": "US",
   "currency": "USD",
-  "sp": "131.25",
-  "fp": "151.25",
+  "checkoutID":"USA",
+  "sp": "399",
+  "fp": "419",
   "ship": "20"
+},{
+  "countryId": "IN",
+  "currency": "INR",
+  "checkoutID":"IND",
+  "sp": "8990",
+  "fp": "8990",
+  "ship": "FREE"
 }, {
   "countryId": "SG",
   "currency": "SGD",
-  "sp": "179.21",
-  "fp": "199.21",
-  "ship": "20"
+  "checkoutID":"SGP",
+  "sp": "399",
+  "fp": "399",
+  "ship": "FREE"
+},
+{
+  "countryId": "AE",
+  "currency": "AED",
+  "checkoutID":"ARE",
+  "sp": "799",
+  "fp": "829",
+  "ship": "30"
+},
+{
+  "countryId": "ID",
+  "currency": "IDR",
+  "checkoutID":"IDN",
+  "sp": "3490000",
+  "fp": "3490000",
+  "ship": "FREE"
 }]
