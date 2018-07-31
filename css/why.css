@@ -94,6 +94,12 @@ header nav .collapse button:focus {
     letter-spacing: 1.3px;
     text-align: center;
 }
+.btn-elemento-light-blue:hover {
+    -webkit-box-shadow: 2px 2px 6px grey;
+    -moz-box-shadow: 2px 2px 6px grey;
+    box-shadow: 2px 2px 6px grey;
+    cursor: pointer;
+}
 
 .btn-elemento-light-blue img {
     max-width: 24px;

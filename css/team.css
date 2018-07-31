@@ -252,7 +252,7 @@ header nav .collapse button:focus {
 }
 
 .hiring-banner .hiring-text .btn:hover {
-    border: none;
+    border: 1px solid #007bff;
 }
 
 

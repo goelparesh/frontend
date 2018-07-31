@@ -262,6 +262,11 @@ header nav .collapse button:focus {
     text-align: center;
     color: #00193a;
 }
+.btn-elemento-orange:hover, .btn-elemento-green:hover{
+    box-shadow: 2px 2px 6px grey;
+    border: none;
+    color: #fff !important;
+}
 
 .counter {
     background-color: #00193a;
@@ -589,6 +594,12 @@ section.callback .col-4 button {
     line-height: 1;
     letter-spacing: 1.3px;
     text-align: center;
+    cursor: pointer;
+}
+.btn-elemento-light-blue:hover {
+    -webkit-box-shadow: 2px 2px 6px grey;
+    -moz-box-shadow: 2px 2px 6px grey;
+    box-shadow: 2px 2px 6px grey;
 }
 
 .btn-elemento-light-blue img {

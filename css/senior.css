@@ -344,7 +344,9 @@ section.project .buy-now .col-6 .btn-buy {
     border-radius: 4.25rem;
     transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
 }
-
+.btn-buy:hover{
+    box-shadow: 2px 2px 6px grey;
+}
 section.purchase {
     background-color: #FAFAFA;
     padding-top: 125px;
