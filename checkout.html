@@ -61,8 +61,8 @@ src="https://www.facebook.com/tr?id=135229380623582&ev=PageView
                     <li class="nav-item dropdown">
                         <a class="nav-item nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">Curriculum</a>
                         <div class="dropdown-menu">
-                            <a class="dropdown-item" href="junior.html">Junior Robotics program (Age 4-9)</a>
-                            <a class="dropdown-item" href="senior.html">Senior Robotics program (Age 10-18)</a>
+                            <a class="dropdown-item" href="junior.html">Junior Robotics program (Age 5-10)</a>
+                            <a class="dropdown-item" href="senior.html">Senior Robotics program (Age 11-18)</a>
                             <a></a>
                         </div>
                     </li>
@@ -461,7 +461,8 @@ src="https://www.facebook.com/tr?id=135229380623582&ev=PageView
 <script>
     function postFormDataToGoogle() {
         console.log('click captured');
-        const scriptURL = 'https://script.google.com/macros/s/AKfycbxEud14DdE_bA56J7ta7aBej65h2tn6Bfp7pM1fLSpN5kZhHZw/exec';
+        
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbyyp5crdakS3eyep6-mbilNxRs_M_5DwaLUjbRg6NVzRwaHsfQ/exec';
         const form = document.forms['submit-to-google-sheet'];
         fetch(scriptURL, { method: 'POST', body: new FormData(form) })
             .then(response => console.log('Success!', response))
