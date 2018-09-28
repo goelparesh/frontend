@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-122292479-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-122292479-1');
+</script>
+    <title>elemento labs</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700" rel="stylesheet">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/all.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Cantarell:700,700i" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/junior.css">
+    <!-- Start of Async Drift Code -->
+<script>
+"use strict";
+
+!function() {
+  var t = window.driftt = window.drift = window.driftt || [];
+  if (!t.init) {
+    if (t.invoked) return void (window.console && console.error && console.error("Drift snippet included twice."));
+    t.invoked = !0, t.methods = [ "identify", "config", "track", "reset", "debug", "show", "ping", "page", "hide", "off", "on" ],
+    t.factory = function(e) {
+      return function() {
+        var n = Array.prototype.slice.call(arguments);
+        return n.unshift(e), t.push(n), t;
+      };
+    }, t.methods.forEach(function(e) {
+      t[e] = t.factory(e);
+    }), t.load = function(t) {
+      var e = 3e5, n = Math.ceil(new Date() / e) * e, o = document.createElement("script");
+      o.type = "text/javascript", o.async = !0, o.crossorigin = "anonymous", o.src = "https://js.driftt.com/include/" + n + "/" + t + ".js";
+      var i = document.getElementsByTagName("script")[0];
+      i.parentNode.insertBefore(o, i);
+    };
+  }
+}();
+drift.SNIPPET_VERSION = '0.3.1';
+drift.load('ufmpy6we3eff');
+</script>
+<!-- End of Async Drift Code -->
+    <!-- Facebook Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window,document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+ fbq('init', '135229380623582'); 
+fbq('track', 'PageView');
+</script>
+<noscript>
+ <img height="1" width="1" 
+src="https://www.facebook.com/tr?id=135229380623582&ev=PageView
+&noscript=1"/>
+</noscript>
+<!-- End Facebook Pixel Code -->
+</head>
+
+<body>
+  <?php
+include 'header-nav.html';
+?>
+	
+	
+	
+    <section class="banner">
+        <img src="images/img-certficate-header.png" alt="certificate">
+        <h1>Junior Program</h1>
+        <p>For Age 5 - 10 years</p>
+    </section>
+    <section class="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-6">
+                    <h1>Platform</h1>
+                    <p>Elemento Labs Junior Program is geared towards developing solid foundation in Robitics and Electronics. No prior knowledge of Robotics or Electronics is required on the part of students.</p>
+                    <p>Apart from Robotics, the hands-on projects help a child develop strong interest in Science, Engineering and Mathematics.
+                    Project based learning helps reinforce concepts, and keep the interest level high among students.</p>
+                </div>
+                <div class="col-6">
+                    <img src="images/semi.png" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="elemento-box">
+        <div class="container">
+            <h1>Elemento Boxes</h1>
+            <p style="padding:10px 0px; ">Delivered every month (for 3 months) containing all equipments.</p>
+            <div class="row">
+                <div class="col-6">
+                    <div class="mask1">
+                        <p class="box-1">Box 1</p>
+                        <ul>
+                            <li class="boxes">Basics of Electronics.</li>
+                            <li class="boxes">Basics of Motors.</li>
+                            <li class="boxes">LED Basic Projects.</li>
+                            <li class="boxes">Build a Robo-car from scratch from the parts shipped in the Box.</li>
+                            <li class="boxes">Generate Electricity from Mechanical Motion. Understand the underlying science.</li>
+
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="mask2">
+                        <p class="box-1">Box 2</p>
+                        <ul>
+                            <li class="boxes">Build an Autonomous Art Making Device, which builds Drawings on its own.</li>
+                            <li class="boxes">Make an Automatic Floor Cleaning Bot.</li>
+                            <li class="boxes">Solidify Understanding of Vibrating DC Motor.</li>
+                            <li class="boxes">Develop understanding of Engineering Principles in maintaining Balance.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="row ">
+                    <div class="col-12 ">
+                        <div class="mask3 ">
+                            <p class="box-1 ">Box 3</p>
+                            <ul>
+                            <li class="boxes ">Build a complete Virtual Reality (VR) system from scratch.</li>
+                            <li class="boxes ">Understand how 3D Vision works.</li>
+                                <li class="boxes ">Understand the science behind the functioning of Virtual Reality.</li>
+                                <li class="boxes ">Observe VR simulation in the VR hardware built by the student.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="purchase">
+        <div class="container">
+            <div class="row">
+                <div class="col-6">
+                    <img src="images/fundamental.png">
+                </div>
+                <div class="col-6">
+                    <h2><span>Fundamentals</span> your child learns during the program</h2>
+                    <ul>
+                        <li><i class="material-icons">keyboard_arrow_right</i> In-depth understanding of electronic circuits </li>
+                        <li><i class="material-icons">keyboard_arrow_right</i> Understand LEDs, switches and battery connections</li>
+                        <li><i class="material-icons">keyboard_arrow_right</i> Understand Motors and their movement control</li>
+                        <li><i class="material-icons">keyboard_arrow_right</i> Understand complex structure building</li>
+                        <li><i class="material-icons">keyboard_arrow_right</i> Build a complete Virtual Reality system from scratch. Understand the Science behind Virtual Reality System</li>
+                        <li><i class="material-icons">keyboard_arrow_right</i> Understand vibration motors and usage.</li>
+                        <li><i class="material-icons">keyboard_arrow_right</i> Understanding of automatic Pulley system.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="project">
+        <div class="container">
+            <h1></h1>
+            <div class="row">
+                <div class="col-4">
+                    <div class="card-panel">
+                        <img src="images/2wdrobocar.jpg" alt="">
+
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="card-panel-02">
+                        <img src="images/brushbot.jpg" alt="">
+
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="card-panel">
+                        <img src="images/virtualreality.png" alt="">
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="row buy-now" id="buy-now">
+                <div class="col-6">
+                    <p>Junior Program (3 Elemento Boxes)</p>
+                    <h4 id="juniorProgramPrice">INR 4,990</h4>
+                    <!--                     <span data-toggle="modal" data-target="#myModal">Change Country</span> -->
+                    <!-- <div id="myModal" class="modal fade" role="dialog">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h4 class="modal-title">Select Country</h4>
+                                    <i data-dismiss="modal" class="material-icons">close</i>
+                                </div>
+                                <div class="modal-body">
+                                    <div id="list-example" class="list-group">
+                                        <a class="list-group-item list-group-item-action" href="#list-item-1">Afghanistan</a>
+                                        <a class="list-group-item list-group-item-action" href="#list-item-2">Aland Island</a>
+                                        <a class="list-group-item list-group-item-action" href="#list-item-3">Albania</a>
+                                        <a class="list-group-item list-group-item-action" href="#list-item-4">Algeria</a>
+                                        <a class="list-group-item list-group-item-action" href="#list-item-1">Andorra</a>
+                                        <a class="list-group-item list-group-item-action" href="#list-item-2">Angola</a>
+                                        <a class="list-group-item list-group-item-action" href="#list-item-3">Anguilla</a>
+                                        <a class="list-group-item list-group-item-action" href="#list-item-4">Antigua & Barbuda</a>
+                                        <a class="list-group-item list-group-item-action" href="#list-item-4">Argintena</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div> -->
+                </div>
+                <div class="col-6">
+                    <a href="checkout.php?productId=junior-robotics" class="btn btn-buy">buy now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+	<?php
+include 'footer.html';
+?>
+    <!--<script src="js/jquery-3.2.1.slim.min.js"></script>-->
+    <script src="js/jquery-3.1.1.min.js"></script>
+
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script>
+    window.onscroll = function() { myFunction() };
+    var navbar = document.getElementById("navbar");
+    var sticky = navbar.offsetTop;
+    var wrap = document.getElementById("buy-now");
+
+    function myFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            document.getElementById("navbar").style.top = "0px";
+        } else {
+            document.getElementById("navbar").style.top = "-1px";
+        }
+        if (window.pageYOffset >= 120) {
+            wrap.classList.add("fix-search");
+        } else {
+            wrap.classList.remove("fix-search");
+        }
+        if (window.pageYOffset >= 3660) {
+            wrap.classList.remove("fix-search");
+        }
+    }
+    function ipLookUp () {
+        $.getJSON('https://ipapi.co/json/', function(response) {
+            console.log(JSON.stringify(response, null, 2));
+            if(response.country.toLowerCase() !== 'in') {
+                document.getElementById('juniorProgramPrice').style.visibility = 'hidden';
+            }
+        });
+    }
+
+    const clientCountry = ipLookUp();
+    </script>
+</body>
+
+</html>

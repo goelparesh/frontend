@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-122292479-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-122292479-1');
+</script>
+    <title>elemento labs</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700" rel="stylesheet">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/all.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Cantarell:700,700i" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/curriculum.css">
+    <link rel="stylesheet" type="text/css" href="css/responsive.css">
+</head>
+
+<body>
+    <?php
+include 'header-nav.html';
+?>
+	
+    <section class="banner pick-program">
+        <div class="container">
+            <div class="programs">
+                <h3>Pick a Elemento Program</h3>
+            </div>
+            <div class="row">
+                <div class="col-6">
+                    <div class="row">
+                        <div class="col-6">
+                            <img src="images/ic-select-juniorprog.png" alt="Junior Robotics Program">
+                        </div>
+                        <div class="col-6">
+                            <h1>JUNIOR PROGRAM</h1>
+                            <p>for ages 5-10 years</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-6">
+                            <p>3 Elemento Boxes</p>
+                            <h3>INR 4,990</h3>
+                            <div id="myModal" class="modal fade" role="dialog">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h4 class="modal-title">Select Country</h4>
+                                            <i data-dismiss="modal" class="material-icons">close</i>
+                                        </div>
+                                        <div class="modal-body">
+                                            <div id="list-example" class="list-group">
+                                                <a class="list-group-item list-group-item-action" href="#list-item-1">Afghanistan</a>
+                                                <a class="list-group-item list-group-item-action" href="#list-item-2">Aland Island</a>
+                                                <a class="list-group-item list-group-item-action" href="#list-item-3">Albania</a>
+                                                <a class="list-group-item list-group-item-action" href="#list-item-4">Algeria</a>
+                                                <a class="list-group-item list-group-item-action" href="#list-item-1">Andorra</a>
+                                                <a class="list-group-item list-group-item-action" href="#list-item-2">Angola</a>
+                                                <a class="list-group-item list-group-item-action" href="#list-item-3">Anguilla</a>
+                                                <a class="list-group-item list-group-item-action" href="#list-item-4">Antigua & Barbuda</a>
+                                                <a class="list-group-item list-group-item-action" href="#list-item-4">Argintena</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <a href="checkout.php?productId=junior-robotics" class="btn-elemento-blue">BUY</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="row">
+                        <div class="col-6">
+                            <img src="images/ic-select-seniorprog.png" alt="Junior Robotics Program">
+                        </div>
+                        <div class="col-6">
+                            <h1>SENIOR PROGRAM</h1>
+                            <p>for ages 11-18 years</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-6">
+                            <p>3 Elemento Boxes</p>
+                            <h3>INR 8,990</h3>
+                            <div id="myModal" class="modal fade" role="dialog">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h4 class="modal-title">Select Country</h4>
+                                            <i data-dismiss="modal" class="material-icons">close</i>
+                                        </div>
+                                        <div class="modal-body">
+                                            <div id="list-example" class="list-group">
+                                                <a class="list-group-item list-group-item-action" href="#list-item-1">Afghanistan</a>
+                                                <a class="list-group-item list-group-item-action" href="#list-item-2">Aland Island</a>
+                                                <a class="list-group-item list-group-item-action" href="#list-item-3">Albania</a>
+                                                <a class="list-group-item list-group-item-action" href="#list-item-4">Algeria</a>
+                                                <a class="list-group-item list-group-item-action" href="#list-item-1">Andorra</a>
+                                                <a class="list-group-item list-group-item-action" href="#list-item-2">Angola</a>
+                                                <a class="list-group-item list-group-item-action" href="#list-item-3">Anguilla</a>
+                                                <a class="list-group-item list-group-item-action" href="#list-item-4">Antigua & Barbuda</a>
+                                                <a class="list-group-item list-group-item-action" href="#list-item-4">Argintena</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <a href="checkout.php?productId=senior-robotics" class="btn-elemento-light-pink">BUY</a>
+                        </div>
+                    </div>
+                </div>
+                <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                    </ol>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <div class="col-6">
+                                <div class="row">
+                                    <div class="col-6">
+                                        <img src="images/ic-select-juniorprog.png" alt="Junior Robotics Program">
+                                    </div>
+                                    <div class="col-6">
+                                        <h1>JUNIOR PROGRAM</h1>
+                                        <p>for ages 5-10 years</p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-6">
+                                        <p>3 Elemento Boxes</p>
+                                        <h3>INR 4,990</h3>
+                                        <button data-toggle="modal" data-target="#myModal" type="button">Change Country</button>
+                                        <div id="myModal" class="modal fade" role="dialog">
+                                            <div class="modal-dialog">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h4 class="modal-title">Select Country</h4>
+                                                        <i data-dismiss="modal" class="material-icons">close</i>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <div id="list-example" class="list-group">
+                                                            <a class="list-group-item list-group-item-action" href="#list-item-1">Afghanistan</a>
+                                                            <a class="list-group-item list-group-item-action" href="#list-item-2">Aland Island</a>
+                                                            <a class="list-group-item list-group-item-action" href="#list-item-3">Albania</a>
+                                                            <a class="list-group-item list-group-item-action" href="#list-item-4">Algeria</a>
+                                                            <a class="list-group-item list-group-item-action" href="#list-item-1">Andorra</a>
+                                                            <a class="list-group-item list-group-item-action" href="#list-item-2">Angola</a>
+                                                            <a class="list-group-item list-group-item-action" href="#list-item-3">Anguilla</a>
+                                                            <a class="list-group-item list-group-item-action" href="#list-item-4">Antigua & Barbuda</a>
+                                                            <a class="list-group-item list-group-item-action" href="#list-item-4">Argintena</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <a href="junior.php" class="btn-elemento-blue">BUY</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="col-6">
+                                <div class="row">
+                                    <div class="col-6">
+                                        <img src="images/ic-select-seniorprog.png" alt="Junior Robotics Program">
+                                    </div>
+                                    <div class="col-6">
+                                        <h1>SENIOR PROGRAM</h1>
+                                        <p>for ages 11-18 years</p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-6">
+                                        <p>3 Elemento Boxes</p>
+                                        <h3>INR 8,990</h3>
+                                        <button data-toggle="modal" data-target="#myModal" type="button">Change Country</button>
+                                        <div id="myModal" class="modal fade" role="dialog">
+                                            <div class="modal-dialog">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h4 class="modal-title">Select Country</h4>
+                                                        <i data-dismiss="modal" class="material-icons">close</i>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <div id="list-example" class="list-group">
+                                                            <a class="list-group-item list-group-item-action" href="#list-item-1">Afghanistan</a>
+                                                            <a class="list-group-item list-group-item-action" href="#list-item-2">Aland Island</a>
+                                                            <a class="list-group-item list-group-item-action" href="#list-item-3">Albania</a>
+                                                            <a class="list-group-item list-group-item-action" href="#list-item-4">Algeria</a>
+                                                            <a class="list-group-item list-group-item-action" href="#list-item-1">Andorra</a>
+                                                            <a class="list-group-item list-group-item-action" href="#list-item-2">Angola</a>
+                                                            <a class="list-group-item list-group-item-action" href="#list-item-3">Anguilla</a>
+                                                            <a class="list-group-item list-group-item-action" href="#list-item-4">Antigua & Barbuda</a>
+                                                            <a class="list-group-item list-group-item-action" href="#list-item-4">Argintena</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <a href="senior.php" class="btn-elemento-light-pink">BUY</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="callback curriculum">
+        <div class="container">
+            <div class="row">
+                <div class="col-4">
+                    <h2>Talk to us</h2>
+                    <p>We are here to answer your questions. Call us at : <span>+91 97739 04934</span></p>
+                </div>
+                <div class="col-4">
+                    <button class="btn-elemento-transparent"><img src="images/call-white.png"> <span>+91 97739 04934</span></button>
+                </div>
+                <div class="col-4">
+                    <span>OR</span>
+                </div>
+                <div class="col-4">
+                    <button type="button" data-toggle="modal" data-target="#exampleModalCenter" class="btn-elemento-light-blue"><img src="images/ic-callback-white.png"> <span>REQUEST A CALLBACK</span></button>
+                </div>
+            </div>
+            <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <section class="form-info">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h5 class="card-title">We are here to help <i data-dismiss="modal" class="material-icons">close</i></h5>
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-text">Please enter your details below. An Elemento teacher will call you and answer your questions.</h5>
+                                    <form action="">
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" placeholder="Name*">
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" placeholder="MobileNumber*">
+                                        </div>
+                                        <h4 class="card-text">Pick a Callback time</h4>
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                <div class="form-group">
+                                                    <input type="button" class="form-control" value="9AM-11AM">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <div class="form-group">
+                                                    <input type="button" class="form-control" value="11AM-1PM">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <div class="form-group">
+                                                    <input type="button" class="form-control" value="1PM-3PM">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <div class="form-group">
+                                                    <input type="button" class="form-control" value="3PM-5PM">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <div class="form-group">
+                                                    <input type="button" class="form-control" value="5PM-8PM">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <div class="form-group">
+                                                    <input type="button" class="form-control btn btn.primary" value="CALL ME">
+                                                </div>
+                                            </div>
+                                    </form>
+                                    </div>
+                                </div>
+                        </section>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+   <?php
+include 'footer.html';
+?>
+   
+    <script src="js/jquery-3.2.1.slim.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+    $('.add-email').on('click', function() {
+        if ($(this).val() == '') {
+            $('form span').removeClass('has-success').addClass('has-warning');
+            $('form strong').addClass('has-success').removeClass('has-warning');
+            $('form .subs-email').addClass('has-success').removeClass('has-warning');
+        }
+    });
+    $('.add-email').on('change', function() {
+        if ($(this).val() == '') {
+            $('form span').removeClass('has-success').addClass('has-warning');
+            $('form strong').addClass('has-success').removeClass('has-warning');
+            $('form .subs-email').addClass('has-success').removeClass('has-warning');
+        }
+    });
+    </script>
+    <script>
+    window.onscroll = function() { myFunction() };
+    var navbar = document.getElementById("navbar");
+    var sticky = navbar.offsetTop;
+
+    function myFunction() {
+        if (window.pageYOffset >= sticky) {
+            navbar.classList.add("sticky")
+        } else {
+            navbar.classList.remove("sticky");
+        }
+    }
+    </script>
+</body>
+</html>

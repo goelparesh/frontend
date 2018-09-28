@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-122292479-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-122292479-1');
+</script>
+    <title>Elemento Labs - Affiliate Program</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700" rel="stylesheet">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/all.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="css/landing.css">
+    <link rel="stylesheet" type="text/css" href="css/responsive.css">
+    <!-- Start of Async Drift Code -->
+<script>
+"use strict";
+
+!function() {
+  var t = window.driftt = window.drift = window.driftt || [];
+  if (!t.init) {
+    if (t.invoked) return void (window.console && console.error && console.error("Drift snippet included twice."));
+    t.invoked = !0, t.methods = [ "identify", "config", "track", "reset", "debug", "show", "ping", "page", "hide", "off", "on" ], 
+    t.factory = function(e) {
+      return function() {
+        var n = Array.prototype.slice.call(arguments);
+        return n.unshift(e), t.push(n), t;
+      };
+    }, t.methods.forEach(function(e) {
+      t[e] = t.factory(e);
+    }), t.load = function(t) {
+      var e = 3e5, n = Math.ceil(new Date() / e) * e, o = document.createElement("script");
+      o.type = "text/javascript", o.async = !0, o.crossorigin = "anonymous", o.src = "https://js.driftt.com/include/" + n + "/" + t + ".js";
+      var i = document.getElementsByTagName("script")[0];
+      i.parentNode.insertBefore(o, i);
+    };
+  }
+}();
+drift.SNIPPET_VERSION = '0.3.1';
+drift.load('ufmpy6we3eff');
+</script>
+<!-- End of Async Drift Code -->
+    <!-- Facebook Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window,document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+ fbq('init', '135229380623582'); 
+fbq('track', 'PageView');
+</script>
+<noscript>
+ <img height="1" width="1" 
+src="https://www.facebook.com/tr?id=135229380623582&ev=PageView
+&noscript=1"/>
+</noscript>
+<!-- End Facebook Pixel Code -->
+
+<style>
+body{
+ overflow-x:hidden !important;
+   
+}
+.bk{
+margin-left:-14px;
+padding:0px;
+width:100vw;
+height:100%;
+ 
+   z-index:100;
+background: rgb(14,198,0);
+background: linear-gradient(38deg, rgba(14,128,0,0.8690826672465861) 0%, rgba(0,255,153,0.7122199221485469) 27%, rgba(0,65,254,0.9363095580028886) 100%);
+   
+   
+}
+
+hr.four {
+margin:0px;
+    height: 14px;
+    border: 0;
+    box-shadow: inset 0 14px 14px -14px rgba(0, 0, 0, 0.7);
+}
+.blak{
+position:relative;
+background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
+background-attachment: fixed;
+ background-image: url("affiliate.jpg");
+
+height:350px;
+
+   
+margin-bottom:0px;
+}
+.hdng
+{
+font-size:35px;
+font-family:Lato;
+font-weight:300;
+letter-spacing:1.25px;
+text-align:center;
+width:100%;
+margin:auto;
+position:absolute;
+bottom:40px;
+color:white;
+padding:7px;
+
+padding-left:0px;
+}
+.illu{
+width:66%;
+
+margin:auto;
+
+}
+
+
+
+
+button.uni{
+  background:#1AAB8A;
+  color:#fff;
+  border:none;
+  position:relative;
+  height:60px;
+  font-size:1em;
+  padding:0 2em;
+  cursor:pointer;
+  transition:800ms ease all;
+  outline:none;
+}
+button.uni:hover{
+  background:#fff;
+  color:#1AAB8A;
+}
+button.uni:before,button:after{
+  content:'';
+  position:absolute;
+  top:0;
+  right:0;
+  height:2px;
+  width:0;
+  background: #1AAB8A;
+  transition:400ms ease all;
+}
+button.uni:after{
+  right:inherit;
+  top:inherit;
+  left:0;
+  bottom:0;
+}
+button.uni:hover:before,button.uni:hover:after{
+  width:100%;
+  transition:800ms ease all;
+}
+
+.uni{
+position:static;
+display:block;
+margin:12px;
+}
+
+
+
+@media only screen and (max-width: 700px)
+{
+.bk > .row{
+margin-left:0px;
+margin-right:0px;
+
+}
+
+.hdng{
+font-size:30px !important;
+}
+
+.illu {
+    width: 98% !important;
+	}
+button.uni{
+font-size:14px !important;
+}
+
+.ll ul{
+margin:6px !important;
+}
+
+}
+</style>
+
+</head>
+
+<body>
+    <?php
+include 'header-nav.html';
+?>
+   
+    <section>
+	
+	<div class="container-fluid blak">
+	<div class=" container-fluid bk">
+    <div class="row">
+	<center><h1 class="hdng"> Earn Money with us <br> Join our affiliate program </h1></center>
+	</div></div>
+	</div><hr class="four">
+	<div class="container">
+	<div class="row"><div class="col-md-12 col-lg-12 col-sm-12 ll">
+	<br><br>
+	<h2> <span style="color:red;">[</span> Join our affiliate program & <b>earn 4%</b> commission per sale  <span style="color:red;">]</span></h2> <br>
+	<p> Few examples of acceptable sharing mediums: </p>
+	<ul>
+	<li>Blogs</li>
+	<li>Websites</li>
+	<li>Facebook & other social media</li>
+	<li>Press</li>
+	<li>YouTube Channels</li>
+	<li>WhatsApp Shares</li>
+	<li>Forums</li>
+	<li>SMS marketing</li>
+	<li>Email Marketing</li>
+	<li>Android Apps</li>
+	</ul>
+	<p><b>**Important:</b> Do not spam. Everything done should compile under the rules of ICANN.</p><br>
+	<h2>How it works?</h2>
+	<img class="illu"  src="robot.png">
+	<br><br><br>
+	<a href="https://www.instamojo.com/affiliate/subscribe/elemento-labs-junior-robotics-program/">
+<button class="uni">Click here to signup for the Junior Program</button>
+</a>
+<a href="https://www.instamojo.com/affiliate/subscribe/elemento-3-month-program/">
+<button class="uni" >Click here to signup  for the Senior Program</button>
+</a>
+	</div></div>
+	</div>
+	</section>
+   
+	<?php
+include 'footer.html';
+?>
+        <script src="js/jquery-3.2.1.slim.min.js"></script>
+        <script src="js/popper.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script type="text/javascript">
+        $('.add-email').on('click', function() {
+            if ($(this).val() == '') {
+                $('form span').removeClass('has-success').addClass('has-warning');
+                $('form strong').addClass('has-success').removeClass('has-warning');
+                $('form .subs-email').addClass('has-success').removeClass('has-warning');
+            }
+        });
+        $('.add-email').on('change', function() {
+            if ($(this).val() == '') {
+                $('form span').removeClass('has-success').addClass('has-warning');
+                $('form strong').addClass('has-success').removeClass('has-warning');
+                $('form .subs-email').addClass('has-success').removeClass('has-warning');
+            }
+        });
+        </script>
+        <script>
+        window.onscroll = function() { myFunction() };
+        var navbar = document.getElementById("navbar");
+        var sticky = navbar.offsetTop;
+
+        function myFunction() {
+            if (window.pageYOffset >= sticky) {
+                navbar.classList.add("sticky")
+            } else {
+                navbar.classList.remove("sticky");
+            }
+        }
+        </script>
+</body>
+
+</html>

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-122292479-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-122292479-1');
+</script>
+    <title>elemento labs</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700" rel="stylesheet">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/all.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/contact.css">
+    <link rel="stylesheet" href="css/landing.css">
+    <link rel="stylesheet" type="text/css" href="css/responsive.css">
+    <!-- Start of Async Drift Code -->
+<script>
+"use strict";
+
+!function() {
+  var t = window.driftt = window.drift = window.driftt || [];
+  if (!t.init) {
+    if (t.invoked) return void (window.console && console.error && console.error("Drift snippet included twice."));
+    t.invoked = !0, t.methods = [ "identify", "config", "track", "reset", "debug", "show", "ping", "page", "hide", "off", "on" ], 
+    t.factory = function(e) {
+      return function() {
+        var n = Array.prototype.slice.call(arguments);
+        return n.unshift(e), t.push(n), t;
+      };
+    }, t.methods.forEach(function(e) {
+      t[e] = t.factory(e);
+    }), t.load = function(t) {
+      var e = 3e5, n = Math.ceil(new Date() / e) * e, o = document.createElement("script");
+      o.type = "text/javascript", o.async = !0, o.crossorigin = "anonymous", o.src = "https://js.driftt.com/include/" + n + "/" + t + ".js";
+      var i = document.getElementsByTagName("script")[0];
+      i.parentNode.insertBefore(o, i);
+    };
+  }
+}();
+drift.SNIPPET_VERSION = '0.3.1';
+drift.load('ufmpy6we3eff');
+</script>
+<!-- End of Async Drift Code -->
+    <!-- Facebook Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window,document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+ fbq('init', '135229380623582'); 
+fbq('track', 'PageView');
+</script>
+<noscript>
+ <img height="1" width="1" 
+src="https://www.facebook.com/tr?id=135229380623582&ev=PageView
+&noscript=1"/>
+</noscript>
+<!-- End Facebook Pixel Code -->
+</head>
+
+<body>
+  <?php
+include 'header-nav.html';
+?>
+	
+	
+	
+    <section class="banner-top slider1 text-center" id="slider">
+        <div class="slider-content">
+            <h2>Hello!</h2>
+            <p>Get in touch with us
+                <br>We would love to hear from you</p>
+        </div>
+    </section>
+    <section class="section2">
+        <div class="container contact_container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h4 class="link">Location</h4>
+                    <p class="subtitle1">601,Nirvana Courtyard
+                        <br>sector 50
+                        <br>Gurgaon-122003(HR)
+                        <br>India</p>
+                </div>
+                <div class="col-md-12">
+                    <h4 class="link">Write to us</h4>
+                    <p class="subtitle1">care@elementolabs.com</p>
+                </div>
+                <div class="col-md-12" style="text-align: center;">
+                    <h4 class="link">call us</h4>
+                    <a class="subtitle1" style="font-size: 18px;font-weight: 500;letter-spacing: 0.1px;text-align: center;color: #00193a;padding-top: 20px;" href="tel:977-390-4934">+91 97739 04934</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section3">
+        <div class="container">
+            <div class="row distance">
+                <div class="col-md-12">
+                    <p class="random">Help your child be a <span>MAKER</span>
+                        <br> and
+                        <span> INNOVATOR</span> with the Element Program
+                    </p>
+                </div>
+                <div class="col-md-12"><a href="robotics-program-for-kids.php" class="btn">GET ELEMENTO</a>
+      </div>
+   </div>
+</div>
+</section>
+
+
+
+<?php
+include 'footer.html';
+?>
+        <script src="js/jquery-3.2.1.slim.min.js"></script>
+        <script src="js/popper.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script type="text/javascript">
+        $('.add-email').on('click', function() {
+            if ($(this).val() == '') {
+                $('form span').removeClass('has-success').addClass('has-warning');
+                $('form strong').addClass('has-success').removeClass('has-warning');
+                $('form .subs-email').addClass('has-success').removeClass('has-warning');
+            }
+        });
+        $('.add-email').on('change', function() {
+            if ($(this).val() == '') {
+                $('form span').removeClass('has-success').addClass('has-warning');
+                $('form strong').addClass('has-success').removeClass('has-warning');
+                $('form .subs-email').addClass('has-success').removeClass('has-warning');
+            }
+        });
+        </script>
+        <script>
+        window.onscroll = function() { myFunction() };
+        var navbar = document.getElementById("navbar");
+        var sticky = navbar.offsetTop;
+
+        function myFunction() {
+            if (window.pageYOffset >= sticky) {
+                navbar.classList.add("sticky")
+            } else {
+                navbar.classList.remove("sticky");
+            }
+        }
+        </script>
+</body>
+
+</html>

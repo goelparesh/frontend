@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-122292479-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-122292479-1');
+</script>
+    <title>elementolabs</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/team.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/all.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="css/landing.css">
+    <!-- Start of Async Drift Code -->
+<script>
+"use strict";
+
+!function() {
+  var t = window.driftt = window.drift = window.driftt || [];
+  if (!t.init) {
+    if (t.invoked) return void (window.console && console.error && console.error("Drift snippet included twice."));
+    t.invoked = !0, t.methods = [ "identify", "config", "track", "reset", "debug", "show", "ping", "page", "hide", "off", "on" ], 
+    t.factory = function(e) {
+      return function() {
+        var n = Array.prototype.slice.call(arguments);
+        return n.unshift(e), t.push(n), t;
+      };
+    }, t.methods.forEach(function(e) {
+      t[e] = t.factory(e);
+    }), t.load = function(t) {
+      var e = 3e5, n = Math.ceil(new Date() / e) * e, o = document.createElement("script");
+      o.type = "text/javascript", o.async = !0, o.crossorigin = "anonymous", o.src = "https://js.driftt.com/include/" + n + "/" + t + ".js";
+      var i = document.getElementsByTagName("script")[0];
+      i.parentNode.insertBefore(o, i);
+    };
+  }
+}();
+drift.SNIPPET_VERSION = '0.3.1';
+drift.load('ufmpy6we3eff');
+</script>
+<!-- End of Async Drift Code -->
+    <!-- Facebook Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window,document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+ fbq('init', '135229380623582'); 
+fbq('track', 'PageView');
+</script>
+<noscript>
+ <img height="1" width="1" 
+src="https://www.facebook.com/tr?id=135229380623582&ev=PageView
+&noscript=1"/>
+</noscript>
+<!-- End Facebook Pixel Code -->
+</head>
+
+<body>
+
+
+<!--#include file="header-nav.html" -->
+
+    <section class="team-banner banner banner-top">
+        <div class="team">
+            <h4 class="team-title">Team</h4>
+            <p class="team-para">Elemento is a Tech-ed company, helping the world achieve excellence in Robotics, Software & Electronics.</p>
+        </div>
+    </section>
+    <section class="team-images">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <img src="images/img-team-paresh.png" alt="">
+                </div>
+                <div class="col-md-8">
+                    <h4 class="team-leaders">Paresh Goel</h4>
+                    <h6 class="team-profile">FOUNDER & CEO</h6>
+                    <p class="team-para">Paresh is a Technology leader holding 6 patents in his name. Few years back, he started teaching Robotics & software to his daughter Sanchita, and realized how motivating the new skillset was for her.</p>
+                    <p class="team-para">On a mission to make a wider impact, he founded Elemento, and brought together a stellar team of Electronics, Mechanical and Software engineers - all united in their mission towards Robotics, Electronics & Software literacy.
+                    <br><br>In his earlier avatar, he worked with Adobe, Samsung, Hike Messenger in various leadership roles. He is also a guest speaker in various schools, and mentors some student-driven Robotics and Software clubs.</p>
+
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <img src="images/img-team-garima.png" alt=""></div>
+                <div class="col-md-8">
+                    <h4 class="team-leaders">Garima Agarwal</h4>
+                    <h6 class="team-profile">CO-FOUNDER & INSTRUCTIONAL DESIGNER</h6>
+                    <p class="team-para">Garima is an Instructional Designer who looks after the overall curriculum design and delivery. She has a penchant for teaching, and belives the world can change, for better, if education is done right.</p>
+                    <p class="team-para">At Elemento, she makes sure that the curriculum design is as per the needs of children, and meets international pedagogy standards.</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <img src="images/img-team-ashwani.png" alt="">
+                </div>
+                <div class="col-md-8">
+                    <h4 class="team-leaders">Ashwani Singh</h4>
+                    <h6 class="team-profile">ROBOTICS & ELECTRONICS ACADEMIC HEAD</h6>
+                    <p class="team-para">Ashwani is a PhD in Electronics and Communication from the prestigious University of South Britanny, France. He is also a Gold Medallist in Electronics Engineering from NIT. We call him a genius when it comes to Electronics System Design and Wireless Communication.</p>
+                    <p class="team-para">At Elemento, Ashwani heads the Robotics curriculum. He makes sure what we teach is cutting-edge and highly relevant in the world of Electronics.</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <img src="images/img-team-rahul.png" alt="">
+                </div>
+                <div class="col-md-8">
+                    <h4 class="team-leaders">Rahul Tiwari</h4>
+                    <h6 class="team-profile">MECHANICAL DESIGN LEAD</h6>
+                    <p class="team-para">Rahul is the mechanical engineering nerd in the team. He is a Mechanical Engineering graduate from NIT, and specialises in Thermodynamics & Fluid Mechanics.
+                    </p>
+                    <p class="team-para">At Elemento, he is responsible for building and procuring all the hardware components to be used in various projects. And, as you would have guessed, he loves spending his free time with his son Raghav :) </p>
+                </div>
+            </div>
+
+            <h1 id="tracks">Our Advisors</h1>
+
+            <div class="row">
+                
+            </div>
+
+            <div class="row">
+                <div class="col-md-4">
+                    <img src="images/ajay.jpg" alt="">
+                </div>
+                <div class="col-md-8">
+                    <h4 class="team-leaders">Ajay Shrivastava</h4>
+                    <h6 class="team-profile">CTO and COO Knowlarity, ex-CTO OYO Rooms, IIITB</h6>
+                    <p class="team-para"> "I am thrilled to be advising Elemento Labs in their mission to revolutionise computer science education for children. We are seeing a huge disruption across industries. I strongly believe that we cannot teach students the way we used to in the past. In the near future itself, Robotics and Programming will become a mandatory skills. I am an admirer of the mission of Elemento Labs in bringing world class kits and pedagogy to our children."
+                    </p>
+                    
+                </div>
+            </div>
+
+
+        </div>
+    </section>
+    <section class="hiring-banner">
+        <div class="hiring-text">
+            <h4 class="hiring-title">We&rsquo;re Hiring!</h4>
+            <p class="hiring-para">We are hiring talented engineers in the field of computer science, and electronics, who are passionate about Teaching. </p>
+            <p class="hiring-para">Please email your resume to</p>
+            <button class="btn btn-outline-primary">hr@elementolabs.com</button>
+        </div>
+    </section>
+
+
+   <script src="js/jquery-3.2.1.slim.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+    $('.add-email').on('click', function() {
+        if ($(this).val() == '') {
+            $('form span').removeClass('has-success').addClass('has-warning');
+            $('form strong').addClass('has-success').removeClass('has-warning');
+            $('form .subs-email').addClass('has-success').removeClass('has-warning');
+        }
+    });
+    $('.add-email').on('change', function() {
+        if ($(this).val() == '') {
+            $('form span').removeClass('has-success').addClass('has-warning');
+            $('form strong').addClass('has-success').removeClass('has-warning');
+            $('form .subs-email').addClass('has-success').removeClass('has-warning');
+        }
+    });
+    </script>
+    <script>
+    window.onscroll = function() { myFunction() };
+    var navbar = document.getElementById("navbar");
+    var sticky = navbar.offsetTop;
+
+    function myFunction() {
+        if (window.pageYOffset >= sticky) {
+            navbar.classList.add("sticky")
+        } else {
+            navbar.classList.remove("sticky");
+        }
+    }
+    </script>
+</body>
+
+</html>
